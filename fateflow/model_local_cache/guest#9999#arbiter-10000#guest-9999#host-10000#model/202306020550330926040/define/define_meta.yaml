@@ -1,0 +1,13 @@
+component_define:
+  outs:
+    module_name: HeteroNN
+  pipeline:
+    module_name: Pipeline
+model_proto:
+  outs:
+    model:
+      HeteroNNGuestMeta: HeteroNNMeta
+      HeteroNNGuestParam: HeteroNNParam
+  pipeline:
+    pipeline:
+      Pipeline: Pipeline

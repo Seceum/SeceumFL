@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Flask-SocketIO Test</title>
+        <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            // Connect to the Socket.IO server.
+            // The connection URL has the following format, relative to the current page:
+            //     http[s]://<domain>:<port>[/<namespace>]
+            {#var socket = io();#}
+            var socket = io();
+            {#var socket = io("http://172.17.16.10:5000/");#}
+
+            // Event handler for new connections.
+            // The callback function is invoked when a connection with the
+            // server is established.
+            socket.on('connect', function() {
+                socket.emit('my_event', {data: 'I\'m connected!'});
+            });
+
+            // Event handler for server sent data.
+            // The callback function is invoked whenever the server emits data
+            // to the client. The data is then displayed in the "Received"
+            // section of the page.
+            socket.on('data_count', function(msg) {
+                $('#data_count').append('<br>' + $('<div/>').text('Received #'+msg.data).html());
+            });
+            socket.on('log_count', function(msg, cb) {
+                $('#log_count').append('<br>' + $('<div/>').text('Received #' + msg.data ).html());
+                if (cb)
+                    cb();
+            });
+            socket.on('log_detail', function(msg, cb) {
+                $('#log_detail').append('<br>' + $('<div/>').text('Received #' + msg.data ).html());
+                if (cb)
+                    cb();
+            });
+            socket.on('error_response', function(msg, cb) {
+                $('#error_response').append('<br>' + $('<div/>').text('Received #' + msg.data ).html());
+                if (cb)
+                    cb();
+            });
+            // Interval function that tests message latency by sending a "ping"
+            // message. The server then responds with a "pong" message and the
+            // round trip time is measured.
+
+
+            // Handlers for the different forms in the page.
+            // These accept data from the user and send it to the server in a
+            // variety of ways
+            //$('form#emit').submit(function(event) {
+            //    socket.emit('my_event', {data: $('#emit_data').val()});
+            //    return// false;
+            //});
+            //$('form#broadcast').submit(function(event) {
+            //    socket.emit('my_broadcast_event', {data: $('#broadcast_data').val()});
+            //    return false;
+            //});
+            $('form#join').submit(function(event) {
+                socket.emit('join', {job_id: $('#join_room').val()});
+                return false;
+            });
+            $('form#leave').submit(function(event) {
+                socket.emit('leave');
+                return false;
+            });
+            $('form#send_room').submit(function(event) {
+                socket.emit('query_log', {begin: $('#begin').val(), end: $('#end').val(), type: $('#type').val()});
+                return false;
+            });
+            //$('form#close').submit(function(event) {
+            //    socket.emit('close_room', {room: $('#close_room').val()});
+            //    return false;
+            //});
+            $('form#disconnect').submit(function(event) {
+                {#socket.emit('disconnect');#}
+                socket.disconnect()
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Flask-SocketIO Test</h1>
+    <p>
+      Async mode is: <b>{{ async_mode }}</b><br>
+      Current transport is: <b><span id="transport"></span></b><br>
+      Average ping/pong latency: <b><span id="ping-pong"></span>ms</b>
+    </p>
+    <h2>Send:</h2>
+{#    <form id="emit" method="POST" action='#'>#}
+{#        <input type="text" name="emit_data" id="emit_data" placeholder="Message">#}
+{#        <input type="submit" value="Echo">#}
+{#    </form>#}
+{#    <form id="broadcast" method="POST" action='#'>#}
+{#        <input type="text" name="broadcast_data" id="broadcast_data" placeholder="Message">#}
+{#        <input type="submit" value="Broadcast">#}
+{#    </form>#}
+    <form id="join" method="POST" action='#'>
+        <input type="text" name="enter" id="join_room" placeholder="查访job_id的日志">
+        <input type="submit" value="查访job_id的日志">
+    </form>
+    <form id="leave" method="POST" action='#'>
+{#        <input type="text" name="enter" id="leave_room" placeholder="退出job_id的日志">#}
+        <input type="submit" value="退出job_id的日志">
+    </form>
+    <form id="send_room" method="POST" action='#'>
+        <input type="text" name="type" id="type" placeholder="type">
+        <input type="text" name="begin" id="begin" placeholder="begin">
+        <input type="text" name="end" id="end" placeholder="end">
+        <input type="submit" value="Send">
+    </form>
+{#    <form id="close" method="POST" action="#">#}
+{#        <input type="text" name="close_room" id="close_room" placeholder="Room Name">#}
+{#        <input type="submit" value="Close Room">#}
+{#    </form>#}
+    <form id="disconnect" method="POST" action="#">
+        <input type="submit" value="Disconnect">
+    </form>
+    <h2>Receive data_count:</h2>
+        <div id="data_count"></div>
+    <h2>Receive log_count:</h2>
+        <div id="log_count"></div>
+    <h2>Receive log_detail:</h2>
+        <div id="log_detail"></div>
+    <h2>Receive error_response:</h2>
+        <div id="error_response"></div>
+</body>
+</html>

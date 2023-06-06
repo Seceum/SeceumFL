@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.webank.ai.fate.core.mlmodel.buffer;
+option java_outer_classname = "FeatureOutliertionMetaProto";
+
+message FeatureOutlierMeta{
+    bool is_imputer = 1;
+    string strategy = 2;
+    map<string,list> missing_value = 3;
+    repeated string missing_value_type = 4;
+    map<string, string>  cols_strategy = 5;
+}
+message list{
+    repeated double value = 1;
+}
+
+message FeatureOutliertionMeta {
+   FeatureOutlierMeta imputer_meta = 1;
+   bool need_run = 2;
+}
+

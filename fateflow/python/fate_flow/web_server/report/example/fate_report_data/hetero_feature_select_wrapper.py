@@ -1,0 +1,390 @@
+url="http://10.0.12.10:9380/v1/tracking/component/metric/all"
+param={
+    "job_id": "202207291145044132080",
+    "component_name": "hetero_lr_0",
+    "role": "guest",
+    "party_id": 9999
+}
+data = {
+    "data": {
+        "train": {
+            "stepwise_0": {
+                "data": [
+                    [
+                        "stepwise_0",
+                        0.0
+                    ]
+                ],
+                "meta": {
+                    "all_features": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "current_ic_val": None,
+                    "direction": "both",
+                    "fit_intercept": "true",
+                    "guest_features_anonym": [
+                        "guest_9999_0",
+                        "guest_9999_1",
+                        "guest_9999_2",
+                        "guest_9999_3",
+                        "guest_9999_4",
+                        "guest_9999_5",
+                        "guest_9999_6",
+                        "guest_9999_7",
+                        "guest_9999_8",
+                        "guest_9999_9"
+                    ],
+                    "guest_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true"
+                    ],
+                    "header": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "host_features_anonym": [
+                        "host_9999_0",
+                        "host_9999_1",
+                        "host_9999_2",
+                        "host_9999_3",
+                        "host_9999_4",
+                        "host_9999_5",
+                        "host_9999_6",
+                        "host_9999_7",
+                        "host_9999_8",
+                        "host_9999_9",
+                        "host_9999_10",
+                        "host_9999_11",
+                        "host_9999_12",
+                        "host_9999_13",
+                        "host_9999_14",
+                        "host_9999_15",
+                        "host_9999_16",
+                        "host_9999_17",
+                        "host_9999_18",
+                        "host_9999_19"
+                    ],
+                    "host_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true"
+                    ],
+                    "intercept": 0.03732610184886125,
+                    "loss": None,
+                    "metric_type": "STEPWISE",
+                    "n_count": 569,
+                    "name": "stepwise_0",
+                    "number_in": 30,
+                    "score_name": "aic",
+                    "to_enter": [],
+                    "weight": {
+                        "x0": -0.0871143320804957,
+                        "x1": -0.05418542159712234,
+                        "x2": -0.08730616211074023,
+                        "x3": -0.08136575459858399,
+                        "x4": -0.04816078334806369,
+                        "x5": -0.06427962257857431,
+                        "x6": -0.07211892986752365,
+                        "x7": -0.08843457345801216,
+                        "x8": -0.047732624580117164,
+                        "x9": -0.03466636191001619
+                    }
+                }
+            },
+            "stepwise_1": {
+                "data": [
+                    [
+                        "stepwise_1",
+                        1.0
+                    ]
+                ],
+                "meta": {
+                    "all_features": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "current_ic_val": None,
+                    "direction": "both",
+                    "fit_intercept": "true",
+                    "guest_features_anonym": [
+                        "guest_9999_0",
+                        "guest_9999_1",
+                        "guest_9999_2",
+                        "guest_9999_3",
+                        "guest_9999_4",
+                        "guest_9999_5",
+                        "guest_9999_6",
+                        "guest_9999_7",
+                        "guest_9999_8",
+                        "guest_9999_9"
+                    ],
+                    "guest_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true"
+                    ],
+                    "header": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "host_features_anonym": [
+                        "host_9999_0",
+                        "host_9999_1",
+                        "host_9999_2",
+                        "host_9999_3",
+                        "host_9999_4",
+                        "host_9999_5",
+                        "host_9999_6",
+                        "host_9999_7",
+                        "host_9999_8",
+                        "host_9999_9",
+                        "host_9999_10",
+                        "host_9999_11",
+                        "host_9999_12",
+                        "host_9999_13",
+                        "host_9999_14",
+                        "host_9999_15",
+                        "host_9999_16",
+                        "host_9999_17",
+                        "host_9999_18",
+                        "host_9999_19"
+                    ],
+                    "host_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "false"
+                    ],
+                    "intercept": 0.0373261018462783,
+                    "loss": None,
+                    "metric_type": "STEPWISE",
+                    "n_count": 569,
+                    "name": "stepwise_1",
+                    "number_in": 29,
+                    "score_name": "aic",
+                    "to_enter": [],
+                    "weight": {
+                        "x0": -0.0871064612609745,
+                        "x1": -0.05418475078075796,
+                        "x2": -0.08730595207235066,
+                        "x3": -0.08136098096858418,
+                        "x4": -0.048196595491130166,
+                        "x5": -0.06436153944317471,
+                        "x6": -0.07219870849205415,
+                        "x7": -0.08847975720694626,
+                        "x8": -0.04775594961538607,
+                        "x9": -0.03479051582060636
+                    }
+                }
+            },
+            "stepwise_2": {
+                "data": [
+                    [
+                        "stepwise_2",
+                        2.0
+                    ]
+                ],
+                "meta": {
+                    "all_features": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "current_ic_val": None,
+                    "direction": "both",
+                    "fit_intercept": "true",
+                    "guest_features_anonym": [
+                        "guest_9999_0",
+                        "guest_9999_1",
+                        "guest_9999_2",
+                        "guest_9999_3",
+                        "guest_9999_4",
+                        "guest_9999_5",
+                        "guest_9999_6",
+                        "guest_9999_7",
+                        "guest_9999_8",
+                        "guest_9999_9"
+                    ],
+                    "guest_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true"
+                    ],
+                    "header": [
+                        "x0",
+                        "x1",
+                        "x2",
+                        "x3",
+                        "x4",
+                        "x5",
+                        "x6",
+                        "x7",
+                        "x8",
+                        "x9"
+                    ],
+                    "host_features_anonym": [
+                        "host_9999_0",
+                        "host_9999_1",
+                        "host_9999_2",
+                        "host_9999_3",
+                        "host_9999_4",
+                        "host_9999_5",
+                        "host_9999_6",
+                        "host_9999_7",
+                        "host_9999_8",
+                        "host_9999_9",
+                        "host_9999_10",
+                        "host_9999_11",
+                        "host_9999_12",
+                        "host_9999_13",
+                        "host_9999_14",
+                        "host_9999_15",
+                        "host_9999_16",
+                        "host_9999_17",
+                        "host_9999_18",
+                        "host_9999_19"
+                    ],
+                    "host_mask": [
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "false",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "false"
+                    ],
+                    "intercept": 0.03732610184635689,
+                    "loss": None,
+                    "metric_type": "STEPWISE",
+                    "n_count": 569,
+                    "name": "stepwise_2",
+                    "number_in": 28,
+                    "score_name": "aic",
+                    "to_enter": [],
+                    "weight": {
+                        "x0": -0.08710895849333067,
+                        "x1": -0.054175606075744565,
+                        "x2": -0.08730823805219057,
+                        "x3": -0.08136284108677111,
+                        "x4": -0.048198242368403976,
+                        "x5": -0.06436360625202636,
+                        "x6": -0.07220025025270532,
+                        "x7": -0.08848243212711657,
+                        "x8": -0.04775881630969531,
+                        "x9": -0.03479153659022487
+                    }
+                }
+            }
+        }
+    },
+    "retcode": 0,
+    "retmsg": "success"
+}

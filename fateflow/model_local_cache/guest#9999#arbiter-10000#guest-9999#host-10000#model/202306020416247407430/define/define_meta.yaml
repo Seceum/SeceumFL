@@ -1,0 +1,13 @@
+component_define:
+  outs:
+    module_name: HeteroXGBoost
+  pipeline:
+    module_name: Pipeline
+model_proto:
+  outs:
+    model:
+      HeteroXGBoostGuestMeta: BoostingTreeModelMeta
+      HeteroXGBoostGuestParam: BoostingTreeModelParam
+  pipeline:
+    pipeline:
+      Pipeline: Pipeline

@@ -1,0 +1,17 @@
+namespace: experiment
+partition: 8
+license_path:
+PAGE_SIZE: 15
+web_socket_port: 9333
+redis:
+  redis_host: 127.0.0.1
+  redis_port: 6379
+  redis_pwd: 
+  redis_socket_db: 1
+docker_model: true #登录密码密码文 默认true
+login_rsa: true #登录密码密码文 默认true
+grafana_user: admin # grafana登录时账号
+grafana_passwd: admin #grafana登录时密码
+grafana_url:  #grafana登录时地址
+prometheus_instance: [] #prometheus 地址
+is_chain: false #是否开启上链

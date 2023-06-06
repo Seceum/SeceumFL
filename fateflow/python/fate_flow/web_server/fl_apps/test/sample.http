@@ -1,0 +1,104 @@
+POST http://{{host}}:9380/v1/sample/data/detail
+Accept: application/json
+Content-Type: application/json
+
+{
+    "sample_id": "bad42df421fc11eda1da525400730f31",
+    "limit": 100
+}
+
+###
+POST http://{{host}}:9380/v1/sample/data/union
+Accept: application/json
+Content-Type: application/json
+
+{
+    "sample_ids": ["bad42df421fc11eda1da525400730f31", "1bca8a801ddf11edb8eb525400730f31"],
+    "limit": 100
+}
+
+###
+POST http://{{host}}:9380/v1/sample/data/transform
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id":"07b7ac4821ff11ed8ad15254001be2a2",
+  "guest": {
+    "sample_ids": ["e971905821fb11edbd735254001be2a2", "8a5ceed4220811ed819e5254001be2a2"],
+    "dt_param": {
+      "label_name": "y",
+      "with_label": true,
+      "missing_fill": true,
+      "missing_fill_method": "mean",
+      "outlier_replace": true
+    }
+  },
+  "hosts": {
+    "10000":{
+        "sample_id": "bad42df421fc11eda1da525400730f31",
+        "dt_param": {
+             "with_label": false,
+            "missing_fill": true,
+            "missing_fill_method": "mean",
+            "outlier_replace": true
+        }
+    }
+  }
+}
+
+###
+POST http://{{host}}:9380/v1/sample/data/transform
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id":"07b7ac4821ff11ed8ad15254001be2a3",
+  "guest": {
+    "sample_ids": ["e971905821fb11edbd735254001be2a2"],
+    "dt_param": {
+      "label_name": "y",
+      "with_label": true,
+      "missing_fill": true,
+      "missing_fill_method": "mean",
+      "outlier_replace": true
+    }
+  }
+}
+
+###
+POST http://{{host}}:9380/v1/sample/data/can_union_or_not
+Accept: application/json
+Content-Type: application/json
+
+{
+  "sample_ids": ["e971905821fb11edbd735254001be2a2", "bad42df421fc11eda1da525400730f31"]
+}
+
+###
+POST http://{{host}}:9380/v1/sample/features
+Accept: application/json
+Content-Type: application/json
+
+{
+  "job_id": "202211011629278788830",
+  "used_module": "selection"
+}
+
+
+###
+POST http://{{host}}:9380/v1/external/partner
+Accept: application/json
+Content-Type: application/json
+
+{
+}
+
+###
+POST http://{{host}}:9380/v1/external/list
+Accept: application/json
+Content-Type: application/json
+
+{
+  "party_id": 10000
+}

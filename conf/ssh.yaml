@@ -1,0 +1,4 @@
+172.17.0.10:
+  port: 22
+  username: root
+  password: root

@@ -1,0 +1,73 @@
+{
+  "job_content_id": "",
+  "project_id": "",
+  "mix_type": "1",
+  "component_parameters": {
+    "owner_sample_0": {
+      "module": "OwnerSample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "9999",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_homo_guest"
+      }
+    },
+    "party_sample_0": {
+      "module": "PartySample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "10000",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_homo_host"
+      }
+    },
+    "union_0": {
+      "module": "Union",
+      "need_run": true,
+      "input": [
+        "owner_sample_0",
+        "party_sample_0"
+      ],
+      "parameters": {
+        "fusion_dataset_name": "fusion_sample"
+      }
+    },
+    "homo_xgboost_0": {
+      "module": "HomoXGBoost",
+      "need_run": true,
+      "input": [
+        "union_0"
+      ],
+      "parameters": {
+        "data_split": {
+          "random_seed": 0,
+          "train_size": 0.8,
+          "test_size": 0.2
+        },
+        "need_cv": true,
+        "task_type": "multi",
+        "num_trees": 5,
+        "max_depth": 3,
+        "learning_rate": 0.3,
+        "random_seed": 0,
+        "threshold": 0.5,
+        "n_iter_no_change": true,
+        "tol": 1e-4,
+        "subsample_feature_rate": 1.0,
+        "bin_num": 32,
+        "l1_coefficient": 0.1,
+        "l2_coefficient": 0.0,
+        "min_sample_split": 2,
+        "min_impurity_split": 1e-3,
+        "min_leaf_node": 1,
+        "max_split_nodes": 65535,
+        "fast_mode": false,
+        "run_goss": false,
+        "top_rate": 0.2,
+        "other_rate": 0.1
+      }
+    }
+  }
+}

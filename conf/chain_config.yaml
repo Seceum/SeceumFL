@@ -1,0 +1,9 @@
+key: explorer_1 #上链配置，来源于前端链配置
+name: seceum #上链配置，来源于前端链配置
+id: s3sgv8kiq8 #上链配置，来源于前端链配置
+store_url: http://150.158.83.219:58080/v2/tx/store?ledger=s3sgv8kiq8&sync=true #上链地址
+summary_url: http://150.158.83.219:8001/explorer-b/home/getSummary #上链地址，概括
+recentStatistics_url: http://150.158.83.219:8001/explorer-b/home/recentStatistics #上链地址，最近统计
+service: false  #是否开启上链
+store_starttime: 2022-11-01 #先查询数据库是否存在上链时间   如果没有，就使用配置文件  上链开始时间
+seconds: 60 #上链定时任务，每隔多少秒运行一次

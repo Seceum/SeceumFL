@@ -1,0 +1,13 @@
+component_define:
+  outs:
+    module_name: DataTransform
+  pipeline:
+    module_name: Pipeline
+model_proto:
+  outs:
+    model:
+      DataTransformMeta: DataTransformMeta
+      DataTransformParam: DataTransformParam
+  pipeline:
+    pipeline:
+      Pipeline: Pipeline

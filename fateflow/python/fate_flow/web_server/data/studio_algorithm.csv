@@ -1,0 +1,11 @@
+name,module_name,mix_type
+K-means,HeteroKmeans,0
+线性回归,HeteroLinR,0
+泊松回归,HeteroPoisson,0
+逻辑回归,HeteroLR,0
+逻辑回归,HomoLR,1
+XGBoost,HeteroXGBoost,0
+XGBoost,HomoXGBoost,1
+LightGBM,HeteroLightGBM,0
+深度神经网络,HeteroNN,0
+深度神经网络,HomoNN,1

@@ -1,0 +1,28 @@
+POST http://{{host}}:9380/v1/project/detail
+Accept: application/json
+Content-Type: application/json
+
+{
+    "project_id": "935e0c9a13bf11eda5a05254001be2a2",
+    "is_join": true
+}
+###
+
+POST http://{{host}}:9380/v1/user/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+###
+
+POST http://{{host}}:9380/v1/project/list
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiIsImlhdCI6MTY2Nzg5MzQ5OCwiZXhwIjoxNjY4MDY2Mjk4fQ.IjNlNDYxNWFjNWYzOTExZWQ4YTgwNTI1NDAwYWNlY2YwIg.OGpbjXxItyf8oSSnYx0NJFJC_qdbuBvC4XzEP7hn8GKVKBLgqnzcIIJaSsm9nISOt88V_zaxIVNXjjMgIIZPig
+
+{
+    "is_join": true
+}

@@ -1,0 +1,68 @@
+{
+  "job_content_id": "",
+  "project_id": "",
+  "mix_type": "0",
+  "component_parameters": {
+    "owner_sample_0": {
+      "module": "OwnerSample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "9999",
+        "sample_id": "",
+        "sample_name": "breast_hetero_guest"
+      }
+    },
+    "party_sample_0": {
+      "module": "PartySample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "10000",
+        "sample_id": "",
+        "sample_name": "breast_hetero_host"
+      }
+    },
+    "intersection_0": {
+      "module": "Intersection",
+      "need_run": true,
+      "input": [
+        "owner_sample_0",
+        "party_sample_0"
+      ],
+      "parameters": {
+        "fusion_dataset_name": "fusion_sample",
+        "id_encode": true,
+        "fusion_conditions": [
+          {
+            "sample_0_id": "",
+            "party_sample_0_id": ""
+          }
+        ]
+      }
+    },
+    "hetero_kmeans_0": {
+      "module": "HeteroKmeans",
+      "need_run": true,
+      "input": [
+        "intersection_0"
+      ],
+      "parameters": {
+        "task_type": "clustering",
+        "k": 3,
+        "max_iter": 10,
+        "tol": 1e-3
+      }
+    },
+    "evaluation_0": {
+      "module": "Evaluation",
+      "need_run": true,
+      "input": [
+        "hetero_kmeans_0"
+      ],
+      "parameters": {
+        "task_type": "clustering"
+      }
+    }
+  }
+}

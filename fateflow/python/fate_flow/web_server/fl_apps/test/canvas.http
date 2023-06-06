@@ -1,0 +1,679 @@
+POST http://{{host}}:9380/v1/canvas/component/run
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "123456",
+  "hosts": [
+    10000
+  ],
+  "last_job_id": "202210201131223840080",
+  "last_component_name": "outs",
+  "module": "HeteroLR",
+  "parameters": {
+    "penalty": "L2",
+    "optimizer": "rmsprop",
+    "tol": 0.0001,
+    "alpha": 0.01,
+    "max_iter": 30,
+    "early_stop": "diff",
+    "batch_size": 320,
+    "batch_strategy": "random",
+    "learning_rate": 0.15,
+    "init_param": {
+      "init_method": "zeros"
+    },
+    "sqn_param": {
+      "update_interval_L": 3,
+      "memory_M": 5,
+      "sample_size": 5000,
+      "random_seed": null
+    },
+    "cv_param": {},
+    "callback_param": {
+      "callbacks": [
+        "ModelCheckpoint"
+      ],
+      "save_freq": "epoch"
+    },
+    "split_param": {
+      "stratified": true,
+      "test_size": 0.3,
+      "validate_size": 0.2,
+      "split_points": [
+        0.0,
+        0.2
+      ]
+    },
+    "eva_param": {
+      "eval_type": "binary",
+      "pos_label": 1
+    }
+  }
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/run
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "123456",
+  "hosts": [
+    10000
+  ],
+  "last_job_id": "202210201131223840080",
+  "last_component_name": "outs",
+  "module": "HeteroFeatureSelection_0",
+  "parameters": {
+    "select_col_indexes": -1,
+    "select_names": [],
+    "filter_methods": [
+      "psi_filter",
+      "correlation_filter",
+      "vif_filter",
+      "statistic_filter",
+      "iv_top_k",
+      "iv_value_thres"
+    ],
+    "psi_param": {
+      "metrics": "psi",
+      "filter_type": "threshold",
+      "take_high": false,
+      "threshold": -0.1
+    },
+    "vif_param": {
+      "threshold": 5
+    },
+    "statistic_param": {
+      "metrics": [
+        "skewness",
+        "skewness",
+        "kurtosis",
+        "median"
+      ],
+      "filter_type": "threshold",
+      "take_high": [
+        true,
+        false,
+        true,
+        false
+      ],
+      "threshold": [
+        -10,
+        10,
+        -1.5,
+        -1.5
+      ]
+    },
+    "iv_top_k_param": {
+      "k": 7,
+      "local_only": false
+    },
+    "iv_value_param": {
+      "value_threshold": 0.1
+    }
+  }
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/parameters
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "job_id": "202210211900445116700",
+  "module": "FeatureSelection"
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/data
+Accept: application/json
+Content-Type: application/json
+
+{
+  "job_id": "202212141114076965440",
+  "module": "outs"
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/data/save
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "job_id": "202210201305412997230",
+  "sample_name": "kevin.10201706"
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/history
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "module": "HeteroFeatureSelection_0"
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/save
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "command": "stop",
+  "canvas_content": [
+    {
+      "shape": "custom-rect",
+      "id": "9639a9bc-24e5-4a11-b080-47c2c47ea4f3",
+      "data": {
+        "nodeName": "DataTransform",
+        "nodeState": "run",
+        "parameter": {
+          "guest_only_param": {
+            "sample_ids": [
+              "e971905821fb11edbd735254001be2a2",
+              "8a5ceed4220811ed819e5254001be2a2"
+            ],
+            "input_format": "dense",
+            "delimitor": ",",
+            "data_type": "float64",
+            "exclusive_data_type": null,
+            "tag_with_value": false,
+            "tag_with_delimitor": "",
+            "missing_fill": false,
+            "default_value": null,
+            "missing_fill_method": null,
+            "missing_inpute": null,
+            "feature": null,
+            "outlier_replace": true,
+            "outlier_replace_method": null,
+            "outlier_impute": null,
+            "outlier_replace_value": null,
+            "with_label": false,
+            "label_name": "y",
+            "label_type": "int",
+            "labels": null,
+            "output_format": "dense",
+            "with_match_id": null
+          },
+          "host_only_param": {
+            "id_10000": {
+              "sample_ids": [
+                "bad42df421fc11eda1da525400730f31"
+              ],
+              "input_format": "dense",
+              "delimitor": ",",
+              "data_type": "float64",
+              "exclusive_data_type": null,
+              "tag_with_value": false,
+              "tag_with_delimitor": ",",
+              "missing_fill": false,
+              "default_value": null,
+              "missing_fill_method": null,
+              "missing_inpute": null,
+              "feature": null,
+              "outlier_replace": true,
+              "outlier_replace_method": null,
+              "outlier_impute": null,
+              "outlier_replace_value": null,
+              "with_label": false,
+              "label_name": "y",
+              "label_type": "int",
+              "labels": null,
+              "output_format": "dense",
+              "with_match_id": null
+            }
+          }
+        },
+        "job_id": "202211161911244420480",
+        "component_name": "outs",
+        "model_info": {
+          "model_id": "guest-9999#host-10000#model",
+          "model_version": "202211161911244420480"
+        },
+        "guest": "9999",
+        "hosts": [
+          10000
+        ],
+        "progress": 100.0
+      }
+    },
+    {
+      "shape": "custom-rect",
+      "id": "e4a0a659-410d-4087-8517-3f74d49e18ed",
+      "data": {
+        "nodeName": "Intersection",
+        "nodeState": "success",
+        "hosts": [
+          10000
+        ],
+        "parameter": {
+          "intersect_method": "dh",
+          "sync_intersect_ids": true,
+          "only_output_key": false,
+          "dh_params": {
+            "hash_method": "sha256",
+            "salt": "12345",
+            "key_length": 1024
+          }
+        },
+        "job_id": "202210271406358005090",
+        "component_name": "outs",
+        "model_info": {
+          "model_id": "arbiter-10000#guest-9999#host-10000#model",
+          "model_version": "202210271406358005090"
+        },
+        "progress": 100.0
+      }
+    },
+    {
+      "shape": "custom-rect",
+      "id": "e4a0a659-410d-4087-8517-3f74d49e18ek",
+      "data": {
+        "nodeName": "HeteroFeatureSelection_0",
+        "nodeState": "success",
+        "hosts": [
+          10000
+        ],
+        "parameter": {
+          "select_col_indexes": -1,
+          "select_names": [],
+          "filter_methods": [
+            "psi_filter",
+            "correlation_filter",
+            "vif_filter",
+            "statistic_filter",
+            "iv_top_k",
+            "iv_value_thres"
+          ],
+          "psi_param": {
+            "metrics": "psi",
+            "filter_type": "threshold",
+            "take_high": false,
+            "threshold": -0.1
+          },
+          "vif_param": {
+            "threshold": 5
+          },
+          "statistic_param": {
+            "metrics": [
+              "skewness",
+              "skewness",
+              "kurtosis",
+              "median"
+            ],
+            "filter_type": "threshold",
+            "take_high": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "threshold": [
+              -10,
+              10,
+              -1.5,
+              -1.5
+            ]
+          },
+          "iv_top_k_param": {
+            "k": 7,
+            "local_only": false
+          },
+          "iv_value_param": {
+            "value_threshold": 0.1
+          },
+          "name": "outs"
+        },
+        "job_id": "202210281216348398000",
+        "component_name": "outs",
+        "model_info": {
+          "model_id": "arbiter-10000#guest-9999#host-10000#model",
+          "model_version": "202210281216348398000"
+        },
+        "progress": 100.0
+      }
+    },
+    {
+      "shape": "custom-rect",
+      "id": "db77a6e6-fa27-400b-bb7b-d4919e1ea19b",
+      "data": {
+        "nodeName": "HeteroLR",
+        "nodeState": "running",
+        "hosts": [
+          10000
+        ],
+        "parameter": {
+          "penalty": "L2",
+          "optimizer": "rmsprop",
+          "tol": 0.0001,
+          "alpha": 0.01,
+          "max_iter": 30,
+          "early_stop": "diff",
+          "batch_size": 320,
+          "batch_strategy": "random",
+          "learning_rate": 0.15,
+          "init_param": {
+            "init_method": "zeros"
+          },
+          "sqn_param": {
+            "update_interval_L": 3,
+            "memory_M": 5,
+            "sample_size": 5000,
+            "random_seed": null
+          },
+          "cv_param": {
+            "n_splits": 5,
+            "shuffle": false,
+            "random_seed": 103,
+            "need_cv": false
+          },
+          "callback_param": {
+            "callbacks": [
+              "ModelCheckpoint"
+            ],
+            "save_freq": "epoch"
+          }
+        },
+        "model_info": {
+          "model_id": "arbiter-10000#guest-9999#host-10000#model",
+          "model_version": "202211011632572915460"
+        },
+        "progress": 100.0,
+        "job_id": "202211011632572915460",
+        "component_name": "outs"
+      }
+    },
+    {
+      "shape": "dag-edge",
+      "id": "3a18b95b-abb8-48cd-81aa-9a3c72fc0951",
+      "source": {
+        "cell": "9639a9bc-24e5-4a11-b080-47c2c47ea4f3",
+        "port": "port1_2"
+      },
+      "target": {
+        "cell": "e4a0a659-410d-4087-8517-3f74d49e18ed",
+        "port": "port2_1"
+      },
+      "zIndex": 4
+    },
+    {
+      "shape": "dag-edge",
+      "id": "4404e6e6-9a7c-4cee-930b-b955c67a389a",
+      "source": {
+        "cell": "e4a0a659-410d-4087-8517-3f74d49e18ed",
+        "port": "port1_2"
+      },
+      "target": {
+        "cell": "e4a0a659-410d-4087-8517-3f74d49e18ek",
+        "port": "port2_2_1"
+      },
+      "zIndex": 5
+    },
+    {
+      "shape": "dag-edge",
+      "id": "82c0e4b0-3b49-4ec9-9186-1de7a240ad05",
+      "source": {
+        "cell": "e4a0a659-410d-4087-8517-3f74d49e18ek",
+        "port": "port2_2"
+      },
+      "target": {
+        "cell": "db77a6e6-fa27-400b-bb7b-d4919e1ea19b",
+        "port": "port2_1"
+      },
+      "zIndex": 8
+    }
+  ]
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/save
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "command": "run",
+  "canvas_content": [
+    {
+      "shape": "custom-rect",
+      "id": "9639a9bc-24e5-4a11-b080-47c2c47ea4f3",
+      "data": {
+        "nodeName": "DataTransform",
+        "nodeState": "run",
+        "parameter": {
+          "guest_only_param": {
+            "sample_ids": [
+              "e971905821fb11edbd735254001be2a2",
+              "8a5ceed4220811ed819e5254001be2a2"
+            ],
+            "input_format": "dense",
+            "delimitor": ",",
+            "data_type": "int",
+            "exclusive_data_type": null,
+            "tag_with_value": null,
+            "tag_with_delimitor": "",
+            "missing_fill": null,
+            "default_value": null,
+            "missing_fill_method": null,
+            "missing_inpute": null,
+            "feature": null,
+            "outlier_replace": true,
+            "outlier_replace_method": null,
+            "outlier_impute": null,
+            "outlier_replace_value": null,
+            "with_label": null,
+            "label_name": "y",
+            "label_type": "int",
+            "labels": null,
+            "output_format": "dense",
+            "with_match_id": null
+          },
+          "host_only_param": {
+            "id_10000": {
+              "sample_ids": [
+                "bad42df421fc11eda1da525400730f31"
+              ],
+              "input_format": "dense",
+              "delimitor": ",",
+              "data_type": "int",
+              "exclusive_data_type": null,
+              "tag_with_value": null,
+              "tag_with_delimitor": ",",
+              "missing_fill": null,
+              "default_value": null,
+              "missing_fill_method": null,
+              "missing_inpute": null,
+              "feature": null,
+              "outlier_replace": true,
+              "outlier_replace_method": null,
+              "outlier_impute": null,
+              "outlier_replace_value": null,
+              "with_label": null,
+              "label_name": "y",
+              "label_type": "int",
+              "labels": null,
+              "output_format": "dense",
+              "with_match_id": null
+            }
+          }
+        },
+        "job_id": "202211011601473738570",
+        "component_name": "outs",
+        "model_info": {
+          "model_id": "guest-9999#host-10000#model",
+          "model_version": "202211011601473738570"
+        },
+        "guest": "9999",
+        "hosts": [
+          10000
+        ],
+        "progress": 100.0
+      }
+    },
+    {
+      "shape": "custom-rect",
+      "id": "db77a6e6-fa27-400b-bb7b-d4919e1ea19b",
+      "data": {
+        "nodeName": "HomoLR",
+        "nodeState": "run",
+        "hosts": [
+          10000
+        ],
+        "parameter": {
+          "penalty": "L2",
+          "optimizer": "sgd",
+          "tol": 1e-05,
+          "alpha": 0.01,
+          "max_iter": 3,
+          "early_stop": "diff",
+          "batch_size": 320,
+          "learning_rate": 0.15,
+          "validation_freqs": 1,
+          "init_param": {
+            "init_method": "zeros"
+          },
+          "cv_param": {
+            "n_splits": 5,
+            "shuffle": false,
+            "random_seed": 103,
+            "need_cv": false
+          }
+        },
+        "model_info": {
+          "model_id": "arbiter-10000#guest-9999#host-10000#model",
+          "model_version": "202211011632572915460"
+        },
+        "progress": 100.0,
+        "job_id": "202211011632572915460",
+        "component_name": "outs"
+      }
+    },
+    {
+      "shape": "dag-edge",
+      "id": "3a18b95b-abb8-48cd-81aa-9a3c72fc0951",
+      "source": {
+        "cell": "9639a9bc-24e5-4a11-b080-47c2c47ea4f3",
+        "port": "port1_2"
+      },
+      "target": {
+        "cell": "db77a6e6-fa27-400b-bb7b-d4919e1ea19b",
+        "port": "port2_1"
+      },
+      "zIndex": 4
+    }
+  ]
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/label_info
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2"
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/load
+Accept: application/json
+Content-Type: application/json
+
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2"
+}
+
+
+###
+POST http://{{host}}:9380/v1/canvas/model_store
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "model_name": "kevin's test 02",
+  "module": "HeteroLR"
+}
+
+
+###
+POST http://{{host}}:9380/v1/canvas/model_list
+Accept: application/json
+Content-Type: application/json
+
+{
+  "project_id": "a44e2b4621fe11eda5ae5254001be2a2"
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/run
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "123456",
+  "hosts": [
+    10000
+  ],
+  "last_job_id": "202210261421336214800",
+  "last_component_name": "outs",
+  "module": "Prediction_0",
+  "parameters": {
+    "model_name": "kevin's test 01"
+  }
+}
+
+###
+
+POST http://{{host}}:9380/v1/canvas/component/data/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "job_id": "202210271406358005090",
+  "component_name": "outs",
+  "fusion_name": "kevin's test 01"
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/duplicate
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2",
+  "canvas_name": "duplicate_01"
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/partner
+Accept: application/json
+Content-Type: application/json
+
+{
+  "canvas_id": "07b7ac4821ff11ed8ad15254001be2a2"
+}
+
+###
+POST http://{{host}}:9380/v1/canvas/all_error_info
+Accept: application/json
+Content-Type: application/json
+
+{
+  "job_id": "202208231728527961950"
+}

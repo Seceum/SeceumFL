@@ -1,0 +1,128 @@
+# Copyright 2019-2022 VMware, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# you may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+version: '3.7'
+
+services:
+  mysql:
+    image: "mysql:8.0.28"
+    container_name: "mysql"
+    volumes:
+      - $PWD/mysql-data/:/var/lib/mysql:rw
+      - $PWD/mysql_init/:/docker-entrypoint-initdb.d/:rw
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    network_mode: "host"
+    privileged: true
+
+  zookeeper:
+    image: "bitnami/zookeeper:latest"
+    container_name: "zookeeper"
+    user: "root"
+    volumes:
+      - $PWD/zk-data/:/bitnami/zookeeper/data/
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    network_mode: "host"
+    privileged: true
+
+  redis:
+    image: "redis:6.0.8"
+    container_name: "redis"
+    user: "root"
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    network_mode: "host"
+    privileged: true
+    command: ["redis-server"]
+
+  rollsite:
+    image: "seceum-fl:3.2"
+    container_name: "rollsite"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["./eggroll/bin/start.sh", "rollsite"]
+
+  nodemanager:
+    image: "seceum-fl:3.2"
+    container_name: "nodemanager"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["./eggroll/bin/start.sh", "nodemanager"]
+
+  clustermanager:
+    image: "seceum-fl:3.2"
+    container_name: "clustermanager"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["./eggroll/bin/start.sh", "clustermanager"]
+
+  fateboard:
+    image: "seceum-fl:3.2"
+    container_name: "fateboard"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["bash", "./fateboard/bin/service.sh", "start"]
+
+  serving:
+    image: "seceum-fl:3.2"
+    container_name: "serving"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["bash","-c", "bin/serving_start.sh"]
+    depends_on:
+      - zookeeper
+
+  fateflow:
+    image: "seceum-fl:3.2"
+    container_name: "fate_flow_server"
+    volumes:
+      - $PWD:/data/projects/fate/
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    command: ["/data/projects/python/venv/bin/python", "fateflow/python/fate_flow/fate_flow_server.py"]
+    depends_on:
+      - zookeeper
+      - mysql
+      - rollsite
+      - clustermanager
+      - nodemanager
+ 
+  seceum-web:
+    image: "seceum-fl-web:3.2"
+    container_name: "seceum-web"
+    volumes:
+      - $PWD/conf/app.config.js:/data/projects/studio/app.config.js
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: "host"
+    privileged: true
+    depends_on:
+      - fateflow
+

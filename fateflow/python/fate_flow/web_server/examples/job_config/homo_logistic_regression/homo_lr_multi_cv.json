@@ -1,0 +1,65 @@
+{
+  "job_content_id": "",
+  "project_id": "",
+  "mix_type": "1",
+  "component_parameters": {
+    "owner_sample_0": {
+      "module": "OwnerSample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "9999",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_homo_guest"
+      }
+    },
+    "party_sample_0": {
+      "module": "PartySample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "10000",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_homo_host"
+      }
+    },
+    "union_0": {
+      "module": "Union",
+      "need_run": true,
+      "input": [
+        "owner_sample_0",
+        "party_sample_0"
+      ],
+      "parameters": {
+        "fusion_dataset_name": "fusion_sample"
+      }
+    },
+    "homo_lr_0": {
+      "module": "HomoLR",
+      "need_run": true,
+      "input": [
+        "union_0"
+      ],
+      "parameters": {
+        "data_split": {
+          "random_seed": null,
+          "train_size": 0.8,
+          "test_size": 0.2
+        },
+        "task_type": "multi",
+        "need_cv": true,
+        "max_iter": 5,
+        "batch_size": 320,
+        "learning_rate": 0.15,
+        "optimizer": "sgd",
+        "decay": 1,
+        "decay_sqrt": true,
+        "penalty": "L2",
+        "alpha": 0.01,
+        "early_stop": "diff",
+        "tol": 1e-4,
+        "threshold": 0.5
+      }
+    }
+  }
+}

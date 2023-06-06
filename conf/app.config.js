@@ -1,0 +1,10 @@
+window.__PRODUCTION__SECEUMFL__CONF__={
+    "VITE_GLOB_APP_TITLE":"SeceumFL",
+    "VITE_GLOB_APP_SHORT_NAME":"SeceumFL",
+    "VITE_GLOB_PROD_MOCK":"false",
+    "VITE_GLOB_API_URL":"http://192.168.1.20:9380",
+    "VITE_GLOB_SPCHAIN_API_URL":"http://127.0.0.1:8001",
+    "VITE_GLOB_SERVICE_API_URL":"http://127.0.0.1:8349/service/",
+    "VITE_GLOB_UPLOAD_URL":"","VITE_GLOB_IMG_URL":"","VITE_GLOB_API_URL_PREFIX":""
+};
+Object.freeze(window.__PRODUCTION__SECEUMFL__CONF__);Object.defineProperty(window,"__PRODUCTION__SECEUMFL__CONF__",{configurable:false,writable:false,});

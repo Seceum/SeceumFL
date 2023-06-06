@@ -1,0 +1,4 @@
+
+•
+pytorchÔ{"0-Linear_0": {"bias": true, "device": null, "dtype": null, "in_features": 10, "out_features": 16, "layer": "Linear", "initializer": {}}, "1-Activation_1": {"inplace": false, "layer": "ReLU", "initializer": {}}}Ú{"0-0": {"out_dim": 32, "activation": "relu", "dropout": null, "need_guest": true, "host_num": 1, "guest_dim": 16, "host_dim": 32, "guest_bias": true, "host_bias": true, "layer": "InteractiveLayer", "initializer": {}}}"Î{"0-Linear_0": {"bias": true, "device": null, "dtype": null, "in_features": 32, "out_features": 2, "layer": "Linear", "initializer": {}}, "1-Activation_1": {"dim": 1, "layer": "Softmax", "initializer": {}}}2{
+AdamWr{"lr": 0.3, "betas": [0.9, 0.999], "eps": 1e-08, "weight_decay": 0.01, "amsgrad": false, "config_type": "pytorch"}:{"weight": null, "size_average": null, "reduce": null, "reduction": "mean", "pos_weight": null, "loss_fn": "BCEWithLogitsLoss"}A333333Ó?classification€ *diff1ñhãˆµøä>:HeteroNN

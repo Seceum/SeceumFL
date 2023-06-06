@@ -1,0 +1,10 @@
+step_index: 0
+step_name: step_name
+create_time: '2023-06-02T04:17:35.617441'
+models:
+  HeteroXGBoostGuestMeta:
+    sha1: f31fa1dea39f10a032cbdeeed9749bceef0bd69d
+    buffer_name: BoostingTreeModelMeta
+  HeteroXGBoostGuestParam:
+    sha1: 9799b61de2607b1e704f0dffbd8e52cd7b28ebc2
+    buffer_name: BoostingTreeModelParam

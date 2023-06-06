@@ -1,0 +1,33 @@
+
+POST http://{{host}}:9380/v1/user/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+###
+
+POST http://{{host}}:9380/v1/model_manage/list
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiIsImlhdCI6MTY2Nzg5MzA2MiwiZXhwIjoxNjY4MDY1ODYyfQ.IjNhZTBhNDY0NWYzODExZWRhN2M5NTI1NDAwYWNlY2YwIg.uCIJM1aDUqHME5Hgr9A15O7VUCSgjGBUu5xsNjy3ELXlcSl8gtdH6ufg4s8NfVX3ngJfHZvoksZhS7q5LGKxhQ
+
+{
+    "is_join": false
+}
+
+###
+POST http://{{host}}:9380/v1/model_manage/release
+Accept: application/json
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiIsImlhdCI6MTY3MDMwMDczMiwiZXhwIjoxNjcwNDczNTMyfQ.IjA1N2Q1ODVjNzUxZTExZWQ5ODUxNTI1NDAwYWNlY2YwIg.ckv-S0wcR3t0wo2c6PTKA2mNeKb-OD4exwXGoMMXfcGLLknp3H8FyMwUpAF79zK24kvyz-fZBeYkHAUYU3_X-Q
+
+{
+    "service_name":"Kevin publish vergin",
+    "model_id":"arbiter-9999#guest-9999#host-10000#model",
+     "model_version":"202212061208253849810",
+     "service_reason":"xxxx"
+}
+

@@ -1,0 +1,72 @@
+{
+  "job_content_id": "",
+  "project_id": "",
+  "mix_type": "0",
+  "component_parameters": {
+    "owner_sample_0": {
+      "module": "OwnerSample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "9999",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_hetero_guest"
+      }
+    },
+    "party_sample_0": {
+      "module": "PartySample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "10000",
+        "sample_id": "",
+        "sample_name": "vehicle_scale_hetero_host"
+      }
+    },
+    "intersection_0": {
+      "module": "Intersection",
+      "need_run": true,
+      "input": [
+        "owner_sample_0",
+        "party_sample_0"
+      ],
+      "parameters": {
+        "fusion_dataset_name": "fusion_a_sample",
+        "id_encode": true,
+        "fusion_conditions": [
+          {
+            "sample_0_id": "",
+            "party_sample_0_id": ""
+          }
+        ]
+      }
+    },
+    "hetero_lr_0": {
+      "module": "HeteroLR",
+      "need_run": true,
+      "input": [
+        "intersection_0"
+      ],
+      "parameters": {
+        "data_split": {
+          "random_seed": null,
+          "train_size": 1.0,
+          "test_size": 0.0
+        },
+        "task_type": "multi",
+        "need_cv": true,
+        "max_iter": 5,
+        "batch_size": 320,
+        "learning_rate": 0.15,
+        "optimizer": "rmsprop",
+        "decay": 1,
+        "decay_sqrt": true,
+        "penalty": "L2",
+        "alpha": 0,
+        "early_stop": "diff",
+        "tol": 1e-4,
+        "threshold": 0.5
+      }
+    }
+  }
+}

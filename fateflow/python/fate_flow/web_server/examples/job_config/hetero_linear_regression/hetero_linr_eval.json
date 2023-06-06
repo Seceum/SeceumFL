@@ -1,0 +1,81 @@
+{
+  "job_content_id": "",
+  "project_id": "",
+  "mix_type": "0",
+  "component_parameters": {
+    "owner_sample_0": {
+      "module": "OwnerSample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "9999",
+        "sample_id": "",
+        "sample_name": "motor_hetero_guest"
+      }
+    },
+    "party_sample_0": {
+      "module": "PartySample",
+      "need_run": true,
+      "input": [],
+      "parameters": {
+        "party_id": "10000",
+        "sample_id": "",
+        "sample_name": "motor_hetero_host"
+      }
+    },
+    "intersection_0": {
+      "module": "Intersection",
+      "need_run": true,
+      "input": [
+        "owner_sample_0",
+        "party_sample_0"
+      ],
+      "parameters": {
+        "fusion_dataset_name": "fusion_sample",
+        "id_encode": true,
+        "fusion_conditions": [
+          {
+            "sample_0_id": "",
+            "party_sample_0_id": ""
+          }
+        ]
+      }
+    },
+    "hetero_linr_0": {
+      "module": "HeteroLinR",
+      "need_run": true,
+      "input": [
+        "intersection_0"
+      ],
+      "parameters": {
+        "data_split": {
+          "random_seed": null,
+          "train_size": 0.8,
+          "test_size": 0.2
+        },
+        "task_type": "regression",
+        "need_cv": false,
+        "max_iter": 5,
+        "batch_size": 0,
+        "learning_rate": 0.15,
+        "optimizer": "sgd",
+        "decay": 0.0,
+        "decay_sqrt": false,
+        "penalty": "L2",
+        "alpha": 0.01,
+        "early_stop": "weight_diff",
+        "tol": 1e-3
+      }
+    },
+    "evaluation_0": {
+      "module": "Evaluation",
+      "need_run": true,
+      "input": [
+        "hetero_linr_0"
+      ],
+      "parameters": {
+        "task_type": "regression"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "route_table": {
+    "default": {
+      "default": [
+        {
+          "ip": "127.0.0.1",
+          "port": 8869,
+          "useSSL": false
+        }
+      ]
+    }
+  },
+  "permission": {
+    "default_allow": true
+  }
+}
