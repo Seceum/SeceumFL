@@ -26,3 +26,4 @@ language = 'zh'
 
 html_theme = 'nature'
 html_static_path = ['_static']
+html_title = "SeceumFL联邦学习系统用户使用手册"
