@@ -24,6 +24,6 @@ language = 'zh'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'nature'
+html_theme = 'furo'
 html_static_path = ['_static']
 html_title = "SeceumFL联邦学习系统用户使用手册"
