@@ -28,3 +28,8 @@ SeceumFL联邦学习系统是神谱科技自主研发的隐私计算系列产品
     .. note:: 系统登录默认用户名和密码都是admin
     .. image:: ../images/login.png
        :align: center
+   
+   登录后首先需查看合作节点是否已经登记在系统中，请进入**系统管理>节点管理**查看，然后点击列表中的**测试**，如下图：
+    .. image:: ../images/test_node.png
+       :align: center
+       
