@@ -26,3 +26,5 @@ language = 'zh'
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_title = "SeceumFL联邦学习系统用户使用手册"
+html_logo = "../images/logo.svg"
