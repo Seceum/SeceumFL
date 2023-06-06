@@ -22,4 +22,9 @@ SeceumFL联邦学习系统是神谱科技自主研发的隐私计算系列产品
 
 快速入门
 ==================
-.. image:: ../images/flow.jpg
+- `部署安装系统<https://github.com/Seceum/SeceumFL/blob/main/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md>`_
+
+- 登录系统
+    .. note:: 系统登录默认用户名和密码都是admin
+    .. image:: ../images/login.png
+       :align: center
