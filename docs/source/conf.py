@@ -35,13 +35,17 @@ html_logo = "../images/logo.svg"
 
 html_theme_options = {
     "top_of_page_button": None,
+    "light_css_variables": {
+        "font-stack": "Arial, sans-serif",
+        "font-stack--monospace": "Courier, monospace",
+    },
 }
 html_sidebars = {
     "**": [
         "sidebar/scroll-start.html",
         "sidebar/brand.html",
         "sidebar/navigation.html",
-        "sidebar/navigation.html",
         "sidebar/variant-selector.html",
+        "sidebar/scroll-end.html",
     ]
 }
