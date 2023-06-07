@@ -33,4 +33,15 @@ html_static_path = ['_static']
 html_title = "SeceumFL联邦学习系统用户使用手册"
 html_logo = "../images/logo.svg"
 
-top_of_page_button = None
+html_theme_options = {
+    "top_of_page_button": None,
+}
+html_sidebars = {
+    "**": [
+        "sidebar/scroll-start.html",
+        "sidebar/brand.html",
+        "sidebar/navigation.html",
+        "sidebar/navigation.html",
+        "sidebar/variant-selector.html",
+    ]
+}
