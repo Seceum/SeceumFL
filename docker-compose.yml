@@ -48,7 +48,7 @@ services:
     command: ["redis-server"]
 
   rollsite:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "rollsite"
     volumes:
       - $PWD:/data/projects/fate/
@@ -58,7 +58,7 @@ services:
     command: ["./eggroll/bin/start.sh", "rollsite"]
 
   nodemanager:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "nodemanager"
     volumes:
       - $PWD:/data/projects/fate/
@@ -68,7 +68,7 @@ services:
     command: ["./eggroll/bin/start.sh", "nodemanager"]
 
   clustermanager:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "clustermanager"
     volumes:
       - $PWD:/data/projects/fate/
@@ -78,7 +78,7 @@ services:
     command: ["./eggroll/bin/start.sh", "clustermanager"]
 
   fateboard:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "fateboard"
     volumes:
       - $PWD:/data/projects/fate/
@@ -88,7 +88,7 @@ services:
     command: ["bash", "./fateboard/bin/service.sh", "start"]
 
   serving:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "serving"
     volumes:
       - $PWD:/data/projects/fate/
@@ -100,7 +100,7 @@ services:
       - zookeeper
 
   fateflow:
-    image: "seceum-fl:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl:3.2"
     container_name: "fate_flow_server"
     volumes:
       - $PWD:/data/projects/fate/
@@ -116,7 +116,7 @@ services:
       - nodemanager
  
   seceum-web:
-    image: "seceum-fl-web:3.2"
+    image: "ccr.ccs.tencentyun.com/seceum/seceum-fl-web:3.2"
     container_name: "seceum-web"
     volumes:
       - $PWD/conf/app.config.js:/data/projects/studio/app.config.js
