@@ -1,15 +1,5 @@
-.. SeceumFL documentation master file, created by
-   sphinx-quickstart on Tue Jun  6 03:14:06 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 欢迎使用SeceumFL联邦学习系统
 ====================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 
 
 产品介绍
