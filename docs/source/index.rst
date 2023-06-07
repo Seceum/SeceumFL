@@ -16,10 +16,12 @@
 快速入门
 ==================
 `部署安装系统 <https://github.com/Seceum/SeceumFL/blob/main/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md>`_ 
-------------------
+^^^^^^^^^^^^^
+
+--------------
 
 登录系统
-'''''''''''''
+^^^^^^^^^^^^^
 
 .. image:: ../images/login.png
    :align: center
@@ -34,9 +36,11 @@
 .. image:: ../images/node_test.png
    :align: center
 
+--------------
+
 
 数据上传和授权
-'''''''''''''
+^^^^^^^^^^^^^
 
 .. image:: ../images/datesets_list.png
    :align: center
@@ -58,9 +62,11 @@
        1. 对方数据没有在列表中点击**“上线”**；
        2. 两方系统并没有联通，进入**系统管理>节点管理**查看是否能看到对方节点，查看部署文档确认是否通过测试；
 
+--------------
+
 
 训练模型
-'''''''''''''
+^^^^^^^^^^^^^
 
 .. image:: ../images/project_list.png
    :align: center
@@ -78,6 +84,8 @@
 
 .. image:: ../images/diagram.png
    :align: center
-   
+
 .. image:: ../images/params.png
    :align: center
+
+--------------
