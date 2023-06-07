@@ -1,6 +1,9 @@
 欢迎使用SeceumFL联邦学习系统
 ====================================
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
 产品介绍
 ==================
@@ -12,16 +15,3 @@
 
 快速入门
 ==================
--  `部署安装系统 <https://github.com/Seceum/SeceumFL/blob/main/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md>`_ 
-
-- 登录系统
-    .. note:: 系统登录默认用户名和密码都是admin
-
-    .. image:: ../images/login.png
-       :align: center
-
-
-   登录后首先需查看**合作节点是否已经登记**在系统中，请进入**系统管理>节点管理** 查看，然后点击列表中的**测试**，如下图：  
-
-    .. image:: ../images/node_test.png
-       :align: center
