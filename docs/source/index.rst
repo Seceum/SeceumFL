@@ -1,5 +1,6 @@
 欢迎使用SeceumFL联邦学习系统
 ====================================
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -38,7 +39,7 @@
 部署安装_
 ^^^^^^^^^^^^^
 
-.. _部署安装: https://github.com/Seceum/SeceumFL/blob/main/%E9%83%A8%E7%BD%B2%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md
+.. _部署安装: https://github.com/Seceum/SeceumFL/blob/main/deployment_CN.md
 
 --------------
 
