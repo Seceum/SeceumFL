@@ -1,5 +1,6 @@
-## SeceumFL
+## SeceumFL v3.2
 
+SeceumFL 联邦学习系统v3.2版本是神谱科技（上海）有限公司基于[FATE](https://github.com/FederatedAI)进行开发的联邦学习产品， SeceumFL 具备了安全隔离域、可信计算、联邦建模等技术能力，有效保障数据安全和用户隐私，支持多方数据安全融合及建模计算，提供从模型训练、评估到应用部署的全流程服务。SeceumFL通过可视化建模的方式呈现给用户，便于用户进行相关的工作。
 
 SeceumFL是一个基于Web的联邦学习全生命周期的管理平台，在[FATE](https://github.com/FederatedAI)的基础上，对它进行了改进，并提供了用户友好的界面，旨在降低用户使用联邦学习的门槛，帮助用户轻松开展联邦建模任务。用户可以通过可视化的方式进行数据管理、建模、模型管理等工作。
 
@@ -25,5 +26,6 @@ SeceumFL是一个基于Web的联邦学习全生命周期的管理平台，在[FA
 
 
 ## 联系我们
+E-mail: cs@seceum.com 
 
-[神谱科技官网](https://www.seceum.com/contact.html)
+更多详细信息，请浏览[神谱科技官网](https://www.seceum.com/contact.html)
