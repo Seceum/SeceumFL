@@ -295,6 +295,7 @@ ded5a9773602      seceum-fl:3.2                "./eggroll/bin/sta..."   26 hours
 d41250c5676e      mysql:8.0.28                "docker-entrypoint..."   26 hours ago      Up 26 hours  mysql
 
 ```
+- **如果服务没有在线（docker ps没有显示服务），可以用docker  ps -a，拿到Container ID（如：38b09a6cf67d），重启容器：docker restart 38b09a6cf67d。**
 
 ### 5.1  Fateflow的服务状态
 首先进入容器内部，如下：
@@ -335,6 +336,7 @@ toy test job 202306050945229905440 is running
 toy test job 202306050945229905440 is success
 
 ```
+其次，可以查看log，观察服务的状态，log的地址为：**./fateflow/logs/fate_flow**。
 
 ### 5.2  Fateboard的服务状态
 使用浏览器打开**http://MY_IP:8083/**, 登录名和密码都是**admin**。如能成功登录，且在**JOBS** Tab页看到上一步执行的任务则表示通过测试。
