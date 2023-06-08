@@ -1,4 +1,4 @@
-各个模块详细说明
+各模块详细说明
 ====================================
 .. toctree::
    :maxdepth: 2
@@ -6,76 +6,93 @@
 
 
 1	系统管理
+-------------------
+
 1.1	用户登录
- .. admonition:: 操作详情
+````````````````
+
+.. admonition:: 操作详情
    :class: note
    1、分别输入「登录名」、「密码」；
    2、点击「登录」。
 
-../images/login.png
+.. image:: ../images/login.png
    :align: center
     图 4：登录
  
+
 1.2	密码修改
- .. admonition:: 操作详情
+````````````````
+
+.. admonition:: 操作详情
    :class: note
     1、用户登录SeceumFL系统；
     2、选择用户名，点击「账号设置」；
     3、按照提示输入相应密码信息，点击「保存」。
  
-../images/pwd_chg.jpg
+.. image:: ../images/pwd_chg.jpg
    :align: center
     图 5：密码修改
 
+
 1.3	用户管理
+````````````````
+
 登录管理员账号，可以对用户信息，项目信息进行新建，编辑。
- .. admonition:: 操作详情
+
+.. admonition:: 操作详情
    :class: note
     1、用户登录SeceumFL系统；
     2、点击「系统管理」中的 [用户管理]；
     3、完成用户的编辑与新建；
 
-../images/user_mngr.jpg
+.. image:: ../images/user_mngr.jpg
    :align: center
     图 6：用户管理
 
-../images/add_usr.jpg
+.. image:: ../images/add_usr.jpg
    :align: center
     图 7：新建用户
 
-../images/usr_edit.jpg
+.. image:: ../images/usr_edit.jpg
    :align: center
     图 8：编辑用户
  
 1.4	角色管理
+````````````````
+
 登录管理员账号，可以新建角色，编辑角色。
 
- .. admonition:: 操作详情
+.. admonition:: 操作详情
    :class: note
     1、用户登录SeceumFL系统；
     2、点击「系统管理」中的 [角色管理]；
 
-../images/auth_conf.jpg
+.. image:: ../images/auth_conf.jpg
    :align: center
     图 9：权限配置
  
 1.5	节点管理
+````````````````
+
 登录管理员账号，查看节点信息，编辑节点，测试节点。
 
-../images/node_list.jpg
+.. image:: ../images/node_list.jpg
    :align: center
     图 11：节点管理
 
-../images/node_norm.jpg
+.. image:: ../images/node_norm.jpg
    :align: center
     图 12：节点连接正常
  
  
 1.6	更多服务
+````````````````
 1.6.1	日志审计
+
 对于系统中的关键动作，Admin可以选择其中某些或者全部动作记录下来以供日后审计，或记录上链。
 
-../images/audit_list.jpg
+.. image:: ../images/audit_list.jpg
    :align: center
     图 15：日志审计
  
@@ -89,72 +106,83 @@
 * 精简告警：支持多种图形和仪表盘查看告警信息，简洁直观
 * 时序数据：通过HTTP来拉取时序数据，也支持推送方式添加时序数据
 
-../images/prome.jpg
+.. image:: ../images/prome.jpg
    :align: center
     图 16：系统监控
  
  
 2	项目管理
+--------------------------
+
 该模块实现了对一个项目的完整执行流程的管理，从新建项目，添加任务，到添加组件，执行组件，最后查看执行报告。项目按照我方发起的和我方参与的进行分类。
  
 2.1	我方发起
-2.1.1新建项目
- .. admonition:: 操作详情
+````````````````
+
+2.1.1 新建项目
+
+.. admonition:: 操作详情
    :class: note
     1、	选择「项目管理」—「我方发起」，在项目列表，点击「新建项目」，进入项目编辑页面；
     2、	填写项目名称，描述，选择参与人员，合作方；
     3、	点击保存
     4、	项目列表中，新增一条项目记录
  
-../images/proj_edit.jpg
+.. image:: ../images/proj_edit.jpg
    :align: center
     图 17：编辑项目
 
 项目列表字段：项目名称，创建者，参与成员，描述，创建时间
  
-../images/proj_list.jpg
+.. image:: ../images/proj_list.jpg
    :align: center
    图 18：我方发起项目列表
 
  
 2.1.2新建任务
- .. admonition:: 操作详情
+
+.. admonition:: 操作详情
    :class: note
     1、点击「项目详情」，点击「新建任务」，弹出新建任务弹窗
     2、填写任务名称，选择任务类型；
     3、点击「确定」，进入「任务列表」页面，新增一条任务。
 
-../images/new_task.jpg
+.. image:: ../images/new_task.jpg
    :align: center
     图 19:新建任务
  
 任务列表字段：任务名称，任务类型，创建者，合作方，创建时间
 
-../images/task_list.jpg
+.. image:: ../images/task_list.jpg
    :align: center
     图 20：任务列表
  
  
 2.2	我方参与
- .. admonition:: 操作详情
+````````````````
+
+.. admonition:: 操作详情
    :class: note
     选择「项目管理」—「我方参与」，展示我方参与的项目列表；
 
 项目列表字段包含：项目名称，发起方，描述，创建时间
  
-../images/peticipate_proj.jpg
+.. image:: ../images/peticipate_proj.jpg
    :align: center
     图 21：我方参与项目列表
 
  
  
 3	模型管理
+----------------------------
+
 该模块保存了各种训练完成的模型，这些模型可用于离线预测。同时还提供模块的导入导出功能。
 
 3.1	我方发起
+````````````````
  
 3.1.1发布模型
- .. admonition:: 操作详情
+.. admonition:: 操作详情
    :class: note
     1、 在模型列表中，点击「发布模型」，进入发布页面
     2、 填写服务名称，申请理由，点击发布
@@ -163,45 +191,50 @@
     5、 上传样本，填写审批意见，点击确定
     6、 此时该模型发布状态为「已发布」，审批状态为「已同意」
  
-../images/audit_mdl.jpg
+.. image:: ../images/audit_mdl.jpg
    :align: center
     图 23：模型审批弹窗
 
- 
- 
+
 3.1.2在线预测
- .. admonition:: 操作详情
+
+.. admonition:: 操作详情
    :class: note
     1、	在模型列表中，选择已发布的模型，点击「在线预测」图标
     2、	此时弹出「在线预测服务」窗口
     3、	填写特征值，id
     4、	点击GO，查看预测结果
  
-../images/inference.png
+.. image:: ../images/inference.png
    :align: center
     图 24：在线预测服务
 
-../images/inference_res.png
+.. image:: ../images/inference_res.png
    :align: center
     图 25：在线预测服务预测结果
 
 3.2	我方参与
- .. admonition:: 操作详情
+````````````````
+
+.. admonition:: 操作详情
    :class: note
     1、选择「模型管理」—「我方参与」，进入模型列表页面
 
 我方参与模型列表字段：模型名称，版本号，所属项目，任务类型，参与样本，申请理由，发布状态，审批状态
  
-../images/perticipate_mdl_list.jpg
+.. image:: ../images/perticipate_mdl_list.jpg
    :align: center
     图 26：我方参与模型列表
  
 4	数据资产
+--------------------------
 该模块保存了项目执行需要的样本资源，分为自有数据，外部数据。可以对自有数据新建样本，上线样本，样本标注。可以对外部数据进行申请授权使用。
 
 4.1	自有数据
+````````````````
+
 4.1.1 新建样本
- .. admonition:: 操作详情
+.. admonition:: 操作详情
    :class: note
     1、选择「数据资产」—「自有数据」
     2、点击「新建样本」，进入样本编辑界面
@@ -212,42 +245,45 @@
     7、点击「样本信息」，展示样本统计信息和元数据信息
     8、点击「上线」，样本记录显示「已上线」，在合作方的「外部数据」列表新增一条样本数据，可以申请使用
  
-../images/new_smp.jpg
+.. image:: ../images/new_smp.jpg
    :align: center
     图 27：新建样本
 
-../images/upload_csv.jpg
+.. image:: ../images/upload_csv.jpg
    :align: center
     图 28：新建本地样本
 
-../images/ano_smpl.jpg
+.. image:: ../images/ano_smpl.jpg
    :align: center
     图 29：样本标注
 
 
 样本列表字段：样本名称，样本集类别，数据源类型，原始文件名称，样本记录数，描述，加入项目数，修改时间，上线状态
  
-../images/smp_list.jpg
+.. image:: ../images/smp_list.jpg
    :align: center
     图 30：自有数据样本列表
 
-../images/smp_detail.jpg
+.. image:: ../images/smp_detail.jpg
    :align: center
     图 31：单个样本信息
  
 4.2	外部数据
- .. admonition:: 操作详情
+````````````````
+.. admonition:: 操作详情
    :class: note
     选择「数据资产」—「外部数据」
 
 外部数据列表字段包括：样本名称，所属节点，样本集类别，样本记录数，描述，融合/使用上限，已融合/已使用，算法用途，截止日期，创建时间，申请状态，可用状态，搜索（关键字菜单选择：可用，可下线，已过期，已删除）
  
-../images/others_data_lst.jpg
+.. image:: ../images/others_data_lst.jpg
    :align: center
     图 32：外部数据样本列表
 
 4.3	授权审批
- .. admonition:: 操作详情
+````````````````
+
+.. admonition:: 操作详情
    :class: note
     1、数据服务方上线样本，进入发起方的「外部数据」点击「申请授权」
     2、该样本状态转为「申请中」
@@ -255,20 +291,22 @@
     4、填写完审批字段，并点击「确定」
     5、发起方查看数据状态显示「可用」
  
-../images/others_data_lst.jpg
+.. image:: ../images/others_data_lst.jpg
    :align: center
     图 33：申请样本授权
  
-../images/audit_smp.jpg
+.. image:: ../images/audit_smp.jpg
    :align: center
     图 34：样本审批
  
  
 5	任务执行
+-----------------------
 
 任务中依次添加数据源，模型组件，连接后进行任务执行，执行完成后生成模型训练报告，评估报告。
 
 5.1	数据样本
+````````````````
 
 5.1.1数据源
 
@@ -277,7 +315,7 @@
     1、	在[数据源][参数配置]下选择「本方数据列表」、「合作方数据列表」；
     2、	右击[数据源]，从此处执行
  
-../images/cmp_dt.jpg
+.. image:: ../images/cmp_dt.jpg
    :align: center
     图 35：数据源执行
 
@@ -291,12 +329,13 @@
     1、在[样本加载][参数配置]下选择「融合样本」；
     2、右击[样本加载]，从此处执行
  
-../images/cmp_reader.jpg
+.. image:: ../images/cmp_reader.jpg
    :align: center
     图 36：样本加载执行
 
 
 5.2	数据融合
+````````````````
 
 6.2.1求交
 该组件是计算两方或多方的相交数据集，而不会泄漏任何差异数据集的信息。主要用于纵向建模任务。
@@ -308,12 +347,14 @@
     3、点击[数据源]下的右边功能项，从此处执行进行求交
     4、在数据集融合完成后：
  
-../images/intersect.jpg
+.. image:: ../images/intersect.jpg
    :align: center
     图 37：求交执行成功报告
 
  
 5.3	数据预处理
+````````````````
+
 数据融合后，可以添加「数据预处理」中的具体组件完成预处理功能模块。
  
 6.3.1缺失值
@@ -322,13 +363,13 @@
 
 （a）在模型训练过程中，调用缺失值组件完成操作，如下图所示：
  
-../images/cmp_impu.jpg
+.. image:: ../images/cmp_impu.jpg
    :align: center
    图 38：缺失值
 
 （b）当分析完成，可以查看分析报告，如下图：
  
-../images/cmp_impu_rep.jpg
+.. image:: ../images/cmp_impu_rep.jpg
    :align: center
     图 39：缺失值分析报告
 
@@ -345,13 +386,13 @@
  
 （a）在模型训练过程中，调用异常值组件完成操作，如下图所示：
     
-../images/cmp_outlier.jpg
+.. image:: ../images/cmp_outlier.jpg
    :align: center
     图 40：异常值
 
 （b）当分析完成，可以查看分析报告，如下图：
  
-../images/cmp_outlier_rep.jpg
+.. image:: ../images/cmp_outlier_rep.jpg
    :align: center
     图 41：异常值-已分析
 
@@ -362,7 +403,7 @@
 
 （a）归一化组件支持标准化操作和最小最大值归一化操作，并点击运行，如下图所示：
  
-../images/cmp_norm.jpg
+.. image:: ../images/cmp_norm.jpg
    :align: center
     图 42：归一化报告
 
@@ -375,21 +416,23 @@
 
 对样本集中离散型指标进行编码操作，如下图：
  
-../images/cmp_onehot.jpg
+.. image:: ../images/cmp_onehot.jpg
    :align: center
     图 43：独热编码
 
 
 6.3.5采样
+
 .. note:: 样本采样有利于样本数据分布平衡，当发现样本数据中正负样本严重不平衡的时候，如果直接进行建模，模拟的泛化能力会非常差，在金融风控领域，样本非平衡情况非常严重，为了提高模型风控预测能力，需要对相关样本数据进行采样，常见的采样方式有上采样，下采样，随机采样等
 在特征预处理界面调用采样组件，完成采样处理。如下图所示：
  
-../images/cmp_sample.jpg
+.. image:: ../images/cmp_sample.jpg
    :align: center
     图 44：采样-报告展开
 
  
 6.3.6样本权重
+
 .. note:: 当样本不平衡，导致样本不是总体样本的无偏估计，从而可能导致模型预测能力下降。遇到这种情况，我们可以通过调节样本权重来尝试解决这个问题。调节样本权重的方法有两种:
 
     	第一种是在Class Weight中指定每种分类的权重；
@@ -398,22 +441,23 @@
 
 （a）对数据集中指标赋予不同的样本权重，操作之前如图所示。
  
-../images/cmp_smp_wt.jpg
+.. image:: ../images/cmp_smp_wt.jpg
    :align: center
     图 45：样本权重标签分层设置
  
 （b）赋予权重操作之后报告，如图所示
 
-../images/cmp_smp_wt_rep.jpg
+.. image:: ../images/cmp_smp_wt_rep.jpg
    :align: center
     图 46：样本权重报告
 
-../images/cmp_smp_wt_rep1.jpg
+.. image:: ../images/cmp_smp_wt_rep1.jpg
    :align: center
     图 47：样本权重本方数据输出报告
  
  
 6.3.7特征分箱
+
 .. note:: 特征分箱组件对特征进行分箱：
 
     »可以计算每一个指标的iv值，基于iv大小可以选择对模型预测效果好的指标进行到模型中；
@@ -422,84 +466,90 @@
 
 （a）在模型训练之前，可以对样本中指标进行特征分箱处理操作。
  
-../images/cmp_bin.jpg
+.. image:: ../images/cmp_bin.jpg
    :align: center
     图 48：特征分箱
 
 （b）特征分箱之后，报告如图所示。
 
-../images/cmp_bin_rep.jpg
+.. image:: ../images/cmp_bin_rep.jpg
    :align: center
     图 49：特征分箱报告
 
  
 6.3.8特征选择
+
 .. note:: 该组件是提供多种类型的过滤器。每个过滤器都可以根据用户配置选择特征。该组件是通过基于不同的指标，对指标进行筛选过滤，选择对模型预测效果比较好的指标。在到模型训练中，常用的指标筛选方法有很多种，常见的有：基于IV、统计指标、VIF、树模型中特征重要性、相关性等，不同的筛选方法基于的指标不同。
 
-../images/cmp_bin_rep.jpg
+.. image:: ../images/cmp_bin_rep.jpg
    :align: center
     图 50：特征选择
 
-../images/cmp_bin_rep.jpg
+.. image:: ../images/cmp_bin_rep.jpg
    :align: center
     图 51：特征选择-Summary报告本方结果
  
-../images/cmp_bin_rep.jpg
+.. image:: ../images/cmp_bin_rep.jpg
    :align: center
     图 52：特征选择-Summary报告合作方结果
 
-../images/cmp_bin_rep.jpg
+.. image:: ../images/cmp_bin_rep.jpg
    :align: center 
     图 53：特征选择-Correlation Filter报告
  
  
 6.3.9皮尔逊
+
 .. note:: 在统计学中，皮尔逊相关系数( Pearson correlation coefficient），又称皮尔逊积矩相关系数（Pearson product-moment correlation coefficient，简称 PPMCC或PCCs），是用于度量两个变量X和Y之间的相关（线性相关），其值介于-1与1之间。皮尔逊相关性对于特征的选择有指导意义。选择和目标变量相关性高的特征，可以提高模型的预测能力，当两个特征之间相关性很高的时候，选择对业务程度最紧密的指标，可以减少模型过拟合的风险。
 
 （a）添加皮尔逊组件，完成皮尔逊系数计算，如图：
  
-../images/cmp_pearson.png
+.. image:: ../images/cmp_pearson.png
    :align: center 
     图 54：皮尔逊
 
 （b）执行完成，可以右击查看运行日志与报告数据，如图：
  
-../images/cmp_pearson_rep.png
+.. image:: ../images/cmp_pearson_rep.png
    :align: center 
     图 55：皮尔逊-报告
 
 
 6.3.10隐匿查询
+
 .. note:: 隐匿查询组件是数据发起方基于指定的id和指标，到数据服务方进行查询数据，数据发起方查询用的id和feature，数据服务方是无法知道具体值，查询到的结果，数据服务方无从知晓，只有数据发起方知道结果。
 
 （a）新建隐匿查询任务，进入任务，添加隐匿查询组件，完成皮尔逊系数计算，如图：
  
-../images/cmp_sir.jpg
+.. image:: ../images/cmp_sir.jpg
    :align: center
     图 56：隐匿查询
 
  
 6.3.11样本稳定性
+
 .. note:: 该组件是用于计算两个不同样本之间的稳定性，当用一个模型对一个A样本进行训练后，用样本B进行评估，如果发现评估指标和训练时候的指标相差很多，我们此时需要验证模型在训练的时候是否产生过拟合或欠拟合，但是在判断我们需要确保训练用的样本A和评估样本B相差不多，分布差不多，如果A,B样本分布相差很大，此时我们发现评估指标相差的话，还不能确认是模型在训练的时候产生过拟合或欠拟合导致。只有A,B样本的分布相同的时候，既PSI值很小，我们才能确定两个评估指标相差很大的原因是模型训练的时候产生的。
  
 （a）添加样本稳定性组件，配置最大分箱数量，完成样本稳定性计算，如图：
  
-../images/cmp_psi.jpg
+.. image:: ../images/cmp_psi.jpg
    :align: center
     图 57：样本稳定性
 
  
 6.3.12正样本未标注
+
 .. note:: PU Learning（Positive-unlabeled learning）是半监督学习的一个研究方向，指在只有正类和无标记数据的情况下训练二分类器。它除了有一个数据（通常是未标注的数据）输入外还需要接一个完成训练的模型的输出数据，且两者的特征是一样的。该组件只在发起方有输出数据
  
 （a）该组件必须有两个上游组件输入，一个是数据输入，另一个是模型输入。组件运行结果如下图：
 
-../images/cmp_pul.jpg
+.. image:: ../images/cmp_pul.jpg
    :align: center 
     图 58：纵向正样本未标注
 
  
 5.4	学习算法
+````````````````
  
 6.4.1 纵向K-means聚类
 .. note:: 该组件是将数据集进行聚类，会将数据集分为 K 个簇，相似度高的样本在同一类种，最终的分类结果是类内相似度高且类间相似度低，每个簇使用簇内所有样本均值来表示，将该均值称为“质心”。聚类算法结果分类指标可以作为衍生指标加入到模型训练种，同时基于聚类算法
@@ -507,17 +557,17 @@
  
 （a）模型训练参数设置，训练之前
  
-../images/cmp_kmeans.jpg
+.. image:: ../images/cmp_kmeans.jpg
    :align: center 
    图 59：纵向K-means聚类
 
 （b）模型训练之后，报告显示
 
-../images/cmp_kmeans_rep.jpg
+.. image:: ../images/cmp_kmeans_rep.jpg
    :align: center 
     图 60：纵向K-means聚类训练报告
 
-../images/cmp_kmeans_rep1.jpg
+.. image:: ../images/cmp_kmeans_rep1.jpg
    :align: center  
     图 61：纵向K-means聚类评估报告
 
@@ -525,21 +575,22 @@
  
  
 6.4.2 纵向线性回归
+
 .. note:: 线性回归模型一般用在因变量Y是连续性的场景下，用线性模型进行训练的话，一般要求数据符合正态分布，而且变量之间不能存在共线性，线性回归模型评估用的指标和二分类模型不同，一般为MAE、MSE、NMSE、R平方等。线性回归模型拟合能力通常比树模型差，但是线性回归模型可解释性比较强。
 
 （a）纵向线性回归训练之前，参数设置
  
-../images/cmp_kmeans_rep.jpg
+.. image:: ../images/cmp_kmeans_rep.jpg
    :align: center 
     图 62：纵向线性回归
 
 （b）模型训练结束后，报告如图所示
  
-../images/cmp_kmeans_rep.jpg
+.. image:: ../images/cmp_kmeans_rep.jpg
    :align: center 
    图 63：纵向线性回归训练报告
 
-../images/cmp_kmeans_rep.jpg
+.. image:: ../images/cmp_kmeans_rep.jpg
    :align: center
    图 64：纵向线性回归评估报告
  
@@ -549,18 +600,18 @@
 
 （a）泊松回归模型训练之前，参数设置
  
-../images/cmp_kmeans.jpg
+.. image:: ../images/cmp_kmeans.jpg
    :align: center
    图 65：纵向泊松回归
 
 
 （b）泊松回归模型训练结束后，报告如图所示
 
-../images/cmp_kmeans_rep.jpg
+.. image:: ../images/cmp_kmeans_rep.jpg
    :align: center
     图 66：纵向泊松回归训练报告
 
-../images/cmp_kmeans_rep1.jpg
+.. image:: ../images/cmp_kmeans_rep1.jpg
    :align: center
     图 67：纵向泊松回归评估报告
 
@@ -572,17 +623,17 @@
 
 （a）设置逐步回归参数
  
-../images/cmp_lr.png
+.. image:: ../images/cmp_lr.png
    :align: center
     图 68：纵向逻辑回归
  
 （b）逻辑回归逐步回归报告，如图所示
  
-../images/cmp_lr_rep.png
+.. image:: ../images/cmp_lr_rep.png
    :align: center
     图 69：纵向逻辑回归训练报告
 
-../images/cmp_lr_rep1.png
+.. image:: ../images/cmp_lr_rep1.png
    :align: center
     图 70：纵向逻辑回归评估报告
 
@@ -592,21 +643,21 @@
 
 （a）XGBoost模型训练之前，参数设置
  
-../images/cmp_xgb.jpg
+.. image:: ../images/cmp_xgb.jpg
    :align: center
     图 71：纵向XGBoost
 
 （b）XGBoost模型训练结束后，报告如图所示
  
-../images/cmp_xgb_rep.jpg
+.. image:: ../images/cmp_xgb_rep.jpg
    :align: center
     图 72：纵向XGBoost训练报告-Tree
 
-../images/cmp_xgb_rep1.jpg
+.. image:: ../images/cmp_xgb_rep1.jpg
    :align: center
     图 73：纵向XGBoost训练报告-Importance
 
-../images/cmp_xgb_rep2.jpg
+.. image:: ../images/cmp_xgb_rep2.jpg
    :align: center
     图 74：纵向XGBoost评估报告
 
@@ -617,22 +668,22 @@
 
 （a）纵向LightGBM模型训练之前，参数设置
  
-../images/cmp_lgbm.jpg
+.. image:: ../images/cmp_lgbm.jpg
    :align: center
     图 75：纵向LightGBM
 
  
 （b）纵向LightGBM模型训练结束后，报告如图所示
  
-../images/cmp_lgbm_rep2.jpg
+.. image:: ../images/cmp_lgbm_rep2.jpg
    :align: center
     图 76：纵向LightGBM训练报告-Tree
 
-../images/cmp_lgbm_rep2.jpg
+.. image:: ../images/cmp_lgbm_rep2.jpg
    :align: center
     图 77：纵向LightGBM训练报告-Importance
 
-../images/cmp_lgbm_rep2.jpg
+.. image:: ../images/cmp_lgbm_rep2.jpg
    :align: center
    图 78：纵向LightGBM评估报告
 
@@ -642,25 +693,25 @@
 
 （a）纵向深度神经网络模型，训练之前基本参数，网络参数设置
  
-../images/cmp_nn_param.jpg
+.. image:: ../images/cmp_nn_param.jpg
    :align: center
    图 79：纵向深度神经网络基本参数设置
 
-../images/cmp_nn_param1.jpg
+.. image:: ../images/cmp_nn_param1.jpg
    :align: center
    图 80：纵向深度神经网络本地网络层设置
  
-../images/cmp_nn_param2.jpg
+.. image:: ../images/cmp_nn_param2.jpg
    :align: center
    图 81：纵向深度神经网络输出网络层设置
 
 （b）纵向深度神经网络训练结束后，报告如图所示
  
-../images/cmp_nn_rep.jpg
+.. image:: ../images/cmp_nn_rep.jpg
    :align: center
    图 82：纵向深度神经网络训练报告
  
-../images/cmp_nn_rep1.jpg
+.. image:: ../images/cmp_nn_rep1.jpg
    :align: center
    图 83：纵向深度神经网络评估报告
 
@@ -671,59 +722,60 @@
 
 （a）横向逻辑回归模型，训练之前，参数设置如图
  
-../images/cmp_homo_lr.jpg
+.. image:: ../images/cmp_homo_lr.jpg
    :align: center
    图 84：横向逻辑回归参数设置
 
 （b）横向逻辑回归模型，训练之后，报告如图所示
  
-../images/cmp_homo_lr_rep.jpg
+.. image:: ../images/cmp_homo_lr_rep.jpg
    :align: center
    图 85：横向逻辑回归训练报告
 
-../images/cmp_homo_lr_rep1.jpg
+.. image:: ../images/cmp_homo_lr_rep1.jpg
    :align: center
    图 86：横向逻辑回归评估报告
 
  
 6.4.9 横向XGBoost
+
 .. note:: XGBoost（eXtreme Gradient Boosting）是Boost（提升）算法家族中的一员，Boost根本思想在于通过多个简单的弱分类器，构建出准确率很高的强分类器。简单地来说，Boost（提升）就是指每一步我都产生一个弱预测模型，然后加权累加到总模型中，可以用于回归和分类问题。如果每一步的弱预测模型生成都是依据损失函数的梯度方向，则称之为梯度提升(Gradient boosting)，这样若干步以后就可以达到逼近损失函数局部最小值的目标。
  
 （a）横向XGBoost模型训练之前，参数设置如图
  
-../images/cmp_homo_xgb.jpg
+.. image:: ../images/cmp_homo_xgb.jpg
    :align: center
    图 87：横向XGBoost 
  
 （b）横向XGBoost模型，训练结束后，报告如图所示
  
-../images/cmp_homo_xgb_rep.jpg
+.. image:: ../images/cmp_homo_xgb_rep.jpg
    :align: center
    图 88：横向XGBoost训练报告 
  
-../images/cmp_homo_xgb_rep1.jpg
+.. image:: ../images/cmp_homo_xgb_rep1.jpg
    :align: center
    图 89：横向XGBoost评估报告
-
  
  
 6.4.10横向深度神经网络
+
 .. note:: 人工神经网络（Artificial Neural Networks，ANN）系统是 20 世纪 40 年代后出现的。它是由众多的神经元可调的连接权值连接而成，具有大规模并行处理、分布式信息存储、良好的自组织自学习能力等特点。BP（Back Propagation）算法又称为误差 反向传播算法，是人工神经网络中的一种监督式的学习算法。BP 神经网络算法在理论上可以逼近任意函数，基本的结构由非线性变化单元组成，具有很强的非线性映射能力。而且网络的中间层数、各层的处理单元数及网络的学习系数等参数可根据具体情况设定，灵活性很大，在优化、信号处理与模式识别、智能控制、故障诊断等许 多领域都有着广泛的应用前景。
 在联邦的方式进行纵向建模训练时，我们将网络拆分成3类：输入层，隐藏层和输出层。在纵向建模时其中输出层只在本方存在。
 
 （a）横向深度神经网络模型，训练之前参数设置如图
  
-../images/cmp_homo_nn.png
+.. image:: ../images/cmp_homo_nn.png
    :align: center
    图 90：横向深度神经网络
  
 （b）横向深度神经网络模型，训练结束后报告如图所示
  
-../images/cmp_homo_nn_rep.png
+.. image:: ../images/cmp_homo_nn_rep.png
    :align: center
    图 91：横向深度神经网络评估报告-Confusion Matrix
  
-../images/cmp_homo_nn_rep1.png
+.. image:: ../images/cmp_homo_nn_rep1.png
    :align: center
    图 92：横向深度神经网络评估报告-ROC
 
@@ -731,50 +783,54 @@
 6.4.10离线预测
 （a）新建离线预测任务，进入任务，添加离线预测组件，选择模型，进行离线预测执行，执行报告如图：
  
-../images/cmp_off.jpg
+.. image:: ../images/cmp_off.jpg
    :align: center
    图 93：离线预测
 
  
 5.5	模型评估
+````````````````
+
 6.5.1模型对比
+
 .. note:: 该组件可以对比不同学习算法的表现。选择多个模型进行模型对比执行，执行完后查看报告。
  
-../images/cmp_eva.jpg
+.. image:: ../images/cmp_eva.jpg
    :align: center
    图 94：模型对比报告 - Evaluation Scores
  
-../images/cmp_eva_cm.jpg
+.. image:: ../images/cmp_eva_cm.jpg
    :align: center
    图 95：模型对比报告 - Confusion Matrix
  
-../images/cmp_eva_roc.jpg
+.. image:: ../images/cmp_eva_roc.jpg
    :align: center
    图 96：模型对比报告 - ROC
 
-../images/cmp_eva_ks.jpg
+.. image:: ../images/cmp_eva_ks.jpg
    :align: center
    图 97：模型对比报告 - K-S
 
 
 5.6	多Host场景运行回归组件
+````````````````````````````````
 
 以逻辑回归组件运行为例: 
 
 1、首先加载数据源，选择三方数据
  
-../images/cmp_mh_reader.png
+.. image:: ../images/cmp_mh_reader.png
    :align: center
    图 98：多host场景数据源加载
 
 2、执行数据求交
  
-../images/cmp_mh_intersect.png
+.. image:: ../images/cmp_mh_intersect.png
    :align: center
    图 99：多host场景求交
 
 3、执行逻辑回归组件，查看报告
 
-../images/cmp_ml_lr.png
+.. image:: ../images/cmp_ml_lr.png
    :align: center
    图 100：多host场景逻辑回归组件运行
