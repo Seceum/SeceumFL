@@ -19,8 +19,8 @@
    2、点击「登录」。
 
 
-.. image:: ../images/login.png
-   :align: center
+.. figure:: ../images/login.png
+
     图 4：登录
 
 
@@ -38,7 +38,7 @@
     3、按照提示输入相应密码信息，点击「保存」。
  
 
-.. image:: ../images/pwd_chg.jpg
+.. figure:: ../images/pwd_chg.jpg
   :align: center
     图 5：密码修改
 
@@ -58,16 +58,16 @@
     3、完成用户的编辑与新建；
 
 
-.. image:: ../images/user_mngr.jpg
-   :align: center
+.. figure:: ../images/user_mngr.jpg
+
     图 6：用户管理
 
-.. image:: ../images/add_usr.jpg
-   :align: center
+.. figure:: ../images/add_usr.jpg
+
     图 7：新建用户
 
-.. image:: ../images/usr_edit.jpg
-   :align: center
+.. figure:: ../images/usr_edit.jpg
+
     图 8：编辑用户
  
 
@@ -84,8 +84,8 @@
     2、点击「系统管理」中的 [角色管理]；
 
 
-.. image:: ../images/auth_conf.jpg
-   :align: center
+.. figure:: ../images/auth_conf.jpg
+
     图 9：权限配置
  
 1.5	节点管理
@@ -93,12 +93,12 @@
 
 登录管理员账号，查看节点信息，编辑节点，测试节点。
 
-.. image:: ../images/node_list.jpg
-   :align: center
+.. figure:: ../images/node_list.jpg
+
     图 11：节点管理
 
-.. image:: ../images/node_norm.jpg
-   :align: center
+.. figure:: ../images/node_norm.jpg
+
     图 12：节点连接正常
  
  
@@ -109,8 +109,8 @@
 
 对于系统中的关键动作，Admin可以选择其中某些或者全部动作记录下来以供日后审计，或记录上链。
 
-.. image:: ../images/audit_list.jpg
-   :align: center
+.. figure:: ../images/audit_list.jpg
+
     图 15：日志审计
  
 1.6.2	系统监控
@@ -133,8 +133,8 @@
   - 时序数据：通过HTTP来拉取时序数据，也支持推送方式添加时序数据
 
 
-.. image:: ../images/prome.jpg
-   :align: center
+.. figure:: ../images/prome.jpg
+
     图 16：系统监控
  
  
@@ -157,15 +157,15 @@
     4、	项目列表中，新增一条项目记录
 
 
-.. image:: ../images/proj_edit.jpg
-   :align: center
+.. figure:: ../images/proj_edit.jpg
+
     图 17：编辑项目
 
 
 项目列表字段：项目名称，创建者，参与成员，描述，创建时间
  
-.. image:: ../images/proj_list.jpg
-   :align: center
+.. figure:: ../images/proj_list.jpg
+
    图 18：我方发起项目列表
 
  
@@ -183,14 +183,14 @@
 
 
 
-.. image:: ../images/new_task.jpg
-   :align: center
+.. figure:: ../images/new_task.jpg
+
     图 19:新建任务
  
 任务列表字段：任务名称，任务类型，创建者，合作方，创建时间
 
-.. image:: ../images/task_list.jpg
-   :align: center
+.. figure:: ../images/task_list.jpg
+
     图 20：任务列表
  
  
@@ -205,8 +205,8 @@
 
 项目列表字段包含：项目名称，发起方，描述，创建时间
  
-.. image:: ../images/peticipate_proj.jpg
-   :align: center
+.. figure:: ../images/peticipate_proj.jpg
+
     图 21：我方参与项目列表
 
  
@@ -238,8 +238,8 @@
     6、 此时该模型发布状态为「已发布」，审批状态为「已同意」
 
 
-.. image:: ../images/audit_mdl.jpg
-   :align: center
+.. figure:: ../images/audit_mdl.jpg
+
     图 23：模型审批弹窗
 
 
@@ -258,13 +258,13 @@
     4、	点击GO，查看预测结果
 
  
-.. image:: ../images/inference.png
-   :align: center
+.. figure:: ../images/inference.png
+
     图 24：在线预测服务
 
 
-.. image:: ../images/inference_res.png
-   :align: center
+.. figure:: ../images/inference_res.png
+
     图 25：在线预测服务预测结果
 
 
@@ -278,8 +278,8 @@
 
 我方参与模型列表字段：模型名称，版本号，所属项目，任务类型，参与样本，申请理由，发布状态，审批状态
  
-.. image:: ../images/perticipate_mdl_list.jpg
-   :align: center
+.. figure:: ../images/perticipate_mdl_list.jpg
+
     图 26：我方参与模型列表
 
 
@@ -313,30 +313,30 @@
     8、点击「上线」，样本记录显示「已上线」，在合作方的「外部数据」列表新增一条样本数据，可以申请使用
 
  
-.. image:: ../images/new_smp.jpg
-   :align: center
+.. figure:: ../images/new_smp.jpg
+
     图 27：新建样本
 
 
-.. image:: ../images/upload_csv.jpg
-   :align: center
+.. figure:: ../images/upload_csv.jpg
+
     图 28：新建本地样本
 
 
-.. image:: ../images/ano_smpl.jpg
-   :align: center
+.. figure:: ../images/ano_smpl.jpg
+
     图 29：样本标注
 
 
 样本列表字段：样本名称，样本集类别，数据源类型，原始文件名称，样本记录数，描述，加入项目数，修改时间，上线状态
  
-.. image:: ../images/smp_list.jpg
-   :align: center
+.. figure:: ../images/smp_list.jpg
+
     图 30：自有数据样本列表
 
 
-.. image:: ../images/smp_detail.jpg
-   :align: center
+.. figure:: ../images/smp_detail.jpg
+
     图 31：单个样本信息
  
 4.2	外部数据
@@ -348,8 +348,8 @@
 
 外部数据列表字段包括：样本名称，所属节点，样本集类别，样本记录数，描述，融合/使用上限，已融合/已使用，算法用途，截止日期，创建时间，申请状态，可用状态，搜索（关键字菜单选择：可用，可下线，已过期，已删除）
  
-.. image:: ../images/others_data_lst.jpg
-   :align: center
+.. figure:: ../images/others_data_lst.jpg
+
     图 32：外部数据样本列表
 
 4.3	授权审批
@@ -369,12 +369,12 @@
     5、发起方查看数据状态显示「可用」
 
  
-.. image:: ../images/others_data_lst.jpg
-   :align: center
+.. figure:: ../images/others_data_lst.jpg
+
     图 33：申请样本授权
  
-.. image:: ../images/audit_smp.jpg
-   :align: center
+.. figure:: ../images/audit_smp.jpg
+
     图 34：样本审批
  
  
@@ -397,8 +397,8 @@
     2、	右击[数据源]，从此处执行
 
  
-.. image:: ../images/cmp_dt.jpg
-   :align: center
+.. figure:: ../images/cmp_dt.jpg
+
     图 35：数据源执行
 
  
@@ -415,8 +415,8 @@
     2、右击[样本加载]，从此处执行
 
  
-.. image:: ../images/cmp_reader.jpg
-   :align: center
+.. figure:: ../images/cmp_reader.jpg
+
     图 36：样本加载执行
 
 
@@ -440,8 +440,8 @@
     4、在数据集融合完成后：
 
  
-.. image:: ../images/intersect.jpg
-   :align: center
+.. figure:: ../images/intersect.jpg
+
     图 37：求交执行成功报告
 
  
@@ -457,14 +457,14 @@
 
 （a）在模型训练过程中，调用缺失值组件完成操作，如下图所示：
  
-.. image:: ../images/cmp_impu.jpg
-   :align: center
+.. figure:: ../images/cmp_impu.jpg
+
    图 38：缺失值
 
 （b）当分析完成，可以查看分析报告，如下图：
  
-.. image:: ../images/cmp_impu_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_impu_rep.jpg
+
     图 39：缺失值分析报告
 
 
@@ -483,14 +483,14 @@
 
 （a）在模型训练过程中，调用异常值组件完成操作，如下图所示：
     
-.. image:: ../images/cmp_outlier.jpg
-   :align: center
+.. figure:: ../images/cmp_outlier.jpg
+
     图 40：异常值
 
 （b）当分析完成，可以查看分析报告，如下图：
  
-.. image:: ../images/cmp_outlier_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_outlier_rep.jpg
+
     图 41：异常值-已分析
 
 
@@ -502,8 +502,8 @@
 
 （a）归一化组件支持标准化操作和最小最大值归一化操作，并点击运行，如下图所示：
  
-.. image:: ../images/cmp_norm.jpg
-   :align: center
+.. figure:: ../images/cmp_norm.jpg
+
     图 42：归一化报告
 
 
@@ -520,8 +520,8 @@
 
 对样本集中离散型指标进行编码操作，如下图：
  
-.. image:: ../images/cmp_onehot.jpg
-   :align: center
+.. figure:: ../images/cmp_onehot.jpg
+
     图 43：独热编码
 
 
@@ -531,8 +531,8 @@
 .. note:: 样本采样有利于样本数据分布平衡，当发现样本数据中正负样本严重不平衡的时候，如果直接进行建模，模拟的泛化能力会非常差，在金融风控领域，样本非平衡情况非常严重，为了提高模型风控预测能力，需要对相关样本数据进行采样，常见的采样方式有上采样，下采样，随机采样等
 在特征预处理界面调用采样组件，完成采样处理。如下图所示：
  
-.. image:: ../images/cmp_sample.jpg
-   :align: center
+.. figure:: ../images/cmp_sample.jpg
+
     图 44：采样-报告展开
 
  
@@ -551,18 +551,18 @@
 
 （a）对数据集中指标赋予不同的样本权重，操作之前如图所示。
  
-.. image:: ../images/cmp_smp_wt.jpg
-   :align: center
+.. figure:: ../images/cmp_smp_wt.jpg
+
     图 45：样本权重标签分层设置
  
 （b）赋予权重操作之后报告，如图所示
 
-.. image:: ../images/cmp_smp_wt_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_smp_wt_rep.jpg
+
     图 46：样本权重报告
 
-.. image:: ../images/cmp_smp_wt_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_smp_wt_rep1.jpg
+
     图 47：样本权重本方数据输出报告
  
  
@@ -581,14 +581,14 @@
 
 （a）在模型训练之前，可以对样本中指标进行特征分箱处理操作。
  
-.. image:: ../images/cmp_bin.jpg
-   :align: center
+.. figure:: ../images/cmp_bin.jpg
+
     图 48：特征分箱
 
 （b）特征分箱之后，报告如图所示。
 
-.. image:: ../images/cmp_bin_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_bin_rep.jpg
+
     图 49：特征分箱报告
 
  
@@ -598,23 +598,23 @@
 .. note:: 该组件是提供多种类型的过滤器。每个过滤器都可以根据用户配置选择特征。该组件是通过基于不同的指标，对指标进行筛选过滤，选择对模型预测效果比较好的指标。在到模型训练中，常用的指标筛选方法有很多种，常见的有：基于IV、统计指标、VIF、树模型中特征重要性、相关性等，不同的筛选方法基于的指标不同。
 
 
-.. image:: ../images/cmp_bin_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_bin_rep.jpg
+
     图 50：特征选择
 
 
-.. image:: ../images/cmp_bin_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_bin_rep.jpg
+
     图 51：特征选择-Summary报告本方结果
 
 
-.. image:: ../images/cmp_bin_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_bin_rep.jpg
+
     图 52：特征选择-Summary报告合作方结果
 
 
-.. image:: ../images/cmp_bin_rep.jpg
-   :align: center 
+.. figure:: ../images/cmp_bin_rep.jpg
+ 
     图 53：特征选择-Correlation Filter报告
  
  
@@ -626,14 +626,14 @@
 
 （a）添加皮尔逊组件，完成皮尔逊系数计算，如图：
  
-.. image:: ../images/cmp_pearson.png
-   :align: center 
+.. figure:: ../images/cmp_pearson.png
+ 
     图 54：皮尔逊
 
 （b）执行完成，可以右击查看运行日志与报告数据，如图：
  
-.. image:: ../images/cmp_pearson_rep.png
-   :align: center 
+.. figure:: ../images/cmp_pearson_rep.png
+ 
     图 55：皮尔逊-报告
 
 
@@ -645,8 +645,8 @@
 
 （a）新建隐匿查询任务，进入任务，添加隐匿查询组件，完成皮尔逊系数计算，如图：
  
-.. image:: ../images/cmp_sir.jpg
-   :align: center
+.. figure:: ../images/cmp_sir.jpg
+
     图 56：隐匿查询
 
  
@@ -658,8 +658,8 @@
 
 （a）添加样本稳定性组件，配置最大分箱数量，完成样本稳定性计算，如图：
  
-.. image:: ../images/cmp_psi.jpg
-   :align: center
+.. figure:: ../images/cmp_psi.jpg
+
     图 57：样本稳定性
 
  
@@ -671,8 +671,8 @@
 
 （a）该组件必须有两个上游组件输入，一个是数据输入，另一个是模型输入。组件运行结果如下图：
 
-.. image:: ../images/cmp_pul.jpg
-   :align: center 
+.. figure:: ../images/cmp_pul.jpg
+ 
     图 58：纵向正样本未标注
 
  
@@ -688,18 +688,18 @@
 
 （a）模型训练参数设置，训练之前
  
-.. image:: ../images/cmp_kmeans.jpg
-   :align: center 
+.. figure:: ../images/cmp_kmeans.jpg
+ 
    图 59：纵向K-means聚类
 
 （b）模型训练之后，报告显示
 
-.. image:: ../images/cmp_kmeans_rep.jpg
-   :align: center 
+.. figure:: ../images/cmp_kmeans_rep.jpg
+ 
     图 60：纵向K-means聚类训练报告
 
-.. image:: ../images/cmp_kmeans_rep1.jpg
-   :align: center  
+.. figure:: ../images/cmp_kmeans_rep1.jpg
+  
     图 61：纵向K-means聚类评估报告
 
 
@@ -711,18 +711,18 @@
 
 （a）纵向线性回归训练之前，参数设置
  
-.. image:: ../images/cmp_kmeans_rep.jpg
-   :align: center 
+.. figure:: ../images/cmp_kmeans_rep.jpg
+ 
     图 62：纵向线性回归
 
 （b）模型训练结束后，报告如图所示
  
-.. image:: ../images/cmp_kmeans_rep.jpg
-   :align: center 
+.. figure:: ../images/cmp_kmeans_rep.jpg
+ 
    图 63：纵向线性回归训练报告
 
-.. image:: ../images/cmp_kmeans_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_kmeans_rep.jpg
+
    图 64：纵向线性回归评估报告
  
  
@@ -734,19 +734,19 @@
 
 （a）泊松回归模型训练之前，参数设置
  
-.. image:: ../images/cmp_kmeans.jpg
-   :align: center
+.. figure:: ../images/cmp_kmeans.jpg
+
    图 65：纵向泊松回归
 
 
 （b）泊松回归模型训练结束后，报告如图所示
 
-.. image:: ../images/cmp_kmeans_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_kmeans_rep.jpg
+
     图 66：纵向泊松回归训练报告
 
-.. image:: ../images/cmp_kmeans_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_kmeans_rep1.jpg
+
     图 67：纵向泊松回归评估报告
 
 
@@ -759,18 +759,18 @@
 
 （a）设置逐步回归参数
  
-.. image:: ../images/cmp_lr.png
-   :align: center
+.. figure:: ../images/cmp_lr.png
+
     图 68：纵向逻辑回归
  
 （b）逻辑回归逐步回归报告，如图所示
  
-.. image:: ../images/cmp_lr_rep.png
-   :align: center
+.. figure:: ../images/cmp_lr_rep.png
+
     图 69：纵向逻辑回归训练报告
 
-.. image:: ../images/cmp_lr_rep1.png
-   :align: center
+.. figure:: ../images/cmp_lr_rep1.png
+
     图 70：纵向逻辑回归评估报告
 
  
@@ -782,22 +782,22 @@
 
 （a）XGBoost模型训练之前，参数设置
  
-.. image:: ../images/cmp_xgb.jpg
-   :align: center
+.. figure:: ../images/cmp_xgb.jpg
+
     图 71：纵向XGBoost
 
 （b）XGBoost模型训练结束后，报告如图所示
  
-.. image:: ../images/cmp_xgb_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_xgb_rep.jpg
+
     图 72：纵向XGBoost训练报告-Tree
 
-.. image:: ../images/cmp_xgb_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_xgb_rep1.jpg
+
     图 73：纵向XGBoost训练报告-Importance
 
-.. image:: ../images/cmp_xgb_rep2.jpg
-   :align: center
+.. figure:: ../images/cmp_xgb_rep2.jpg
+
     图 74：纵向XGBoost评估报告
 
 5.4.6 纵向LightGBM
@@ -810,23 +810,23 @@
 
 （a）纵向LightGBM模型训练之前，参数设置
  
-.. image:: ../images/cmp_lgbm.jpg
-   :align: center
+.. figure:: ../images/cmp_lgbm.jpg
+
     图 75：纵向LightGBM
 
  
 （b）纵向LightGBM模型训练结束后，报告如图所示
  
-.. image:: ../images/cmp_lgbm_rep2.jpg
-   :align: center
+.. figure:: ../images/cmp_lgbm_rep2.jpg
+
     图 76：纵向LightGBM训练报告-Tree
 
-.. image:: ../images/cmp_lgbm_rep2.jpg
-   :align: center
+.. figure:: ../images/cmp_lgbm_rep2.jpg
+
     图 77：纵向LightGBM训练报告-Importance
 
-.. image:: ../images/cmp_lgbm_rep2.jpg
-   :align: center
+.. figure:: ../images/cmp_lgbm_rep2.jpg
+
    图 78：纵向LightGBM评估报告
 
 5.4.7 纵向深度神经网络
@@ -838,26 +838,26 @@
 
 （a）纵向深度神经网络模型，训练之前基本参数，网络参数设置
  
-.. image:: ../images/cmp_nn_param.jpg
-   :align: center
+.. figure:: ../images/cmp_nn_param.jpg
+
    图 79：纵向深度神经网络基本参数设置
 
-.. image:: ../images/cmp_nn_param1.jpg
-   :align: center
+.. figure:: ../images/cmp_nn_param1.jpg
+
    图 80：纵向深度神经网络本地网络层设置
  
-.. image:: ../images/cmp_nn_param2.jpg
-   :align: center
+.. figure:: ../images/cmp_nn_param2.jpg
+
    图 81：纵向深度神经网络输出网络层设置
 
 （b）纵向深度神经网络训练结束后，报告如图所示
  
-.. image:: ../images/cmp_nn_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_nn_rep.jpg
+
    图 82：纵向深度神经网络训练报告
  
-.. image:: ../images/cmp_nn_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_nn_rep1.jpg
+
    图 83：纵向深度神经网络评估报告
 
  
@@ -870,18 +870,18 @@
 
 （a）横向逻辑回归模型，训练之前，参数设置如图
  
-.. image:: ../images/cmp_homo_lr.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_lr.jpg
+
    图 84：横向逻辑回归参数设置
 
 （b）横向逻辑回归模型，训练之后，报告如图所示
  
-.. image:: ../images/cmp_homo_lr_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_lr_rep.jpg
+
    图 85：横向逻辑回归训练报告
 
-.. image:: ../images/cmp_homo_lr_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_lr_rep1.jpg
+
    图 86：横向逻辑回归评估报告
 
  
@@ -893,18 +893,18 @@
 
 （a）横向XGBoost模型训练之前，参数设置如图
  
-.. image:: ../images/cmp_homo_xgb.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_xgb.jpg
+
    图 87：横向XGBoost 
  
 （b）横向XGBoost模型，训练结束后，报告如图所示
  
-.. image:: ../images/cmp_homo_xgb_rep.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_xgb_rep.jpg
+
    图 88：横向XGBoost训练报告 
  
-.. image:: ../images/cmp_homo_xgb_rep1.jpg
-   :align: center
+.. figure:: ../images/cmp_homo_xgb_rep1.jpg
+
    图 89：横向XGBoost评估报告
  
  
@@ -917,18 +917,18 @@
 
 （a）横向深度神经网络模型，训练之前参数设置如图
  
-.. image:: ../images/cmp_homo_nn.png
-   :align: center
+.. figure:: ../images/cmp_homo_nn.png
+
    图 90：横向深度神经网络
  
 （b）横向深度神经网络模型，训练结束后报告如图所示
  
-.. image:: ../images/cmp_homo_nn_rep.png
-   :align: center
+.. figure:: ../images/cmp_homo_nn_rep.png
+
    图 91：横向深度神经网络评估报告-Confusion Matrix
  
-.. image:: ../images/cmp_homo_nn_rep1.png
-   :align: center
+.. figure:: ../images/cmp_homo_nn_rep1.png
+
    图 92：横向深度神经网络评估报告-ROC
 
  
@@ -937,8 +937,8 @@
 
 （a）新建离线预测任务，进入任务，添加离线预测组件，选择模型，进行离线预测执行，执行报告如图：
  
-.. image:: ../images/cmp_off.jpg
-   :align: center
+.. figure:: ../images/cmp_off.jpg
+
    图 93：离线预测
 
  
@@ -951,20 +951,20 @@
 .. note:: 该组件可以对比不同学习算法的表现。选择多个模型进行模型对比执行，执行完后查看报告。
  
  
-.. image:: ../images/cmp_eva.jpg
-   :align: center
+.. figure:: ../images/cmp_eva.jpg
+
    图 94：模型对比报告 - Evaluation Scores
  
-.. image:: ../images/cmp_eva_cm.jpg
-   :align: center
+.. figure:: ../images/cmp_eva_cm.jpg
+
    图 95：模型对比报告 - Confusion Matrix
  
-.. image:: ../images/cmp_eva_roc.jpg
-   :align: center
+.. figure:: ../images/cmp_eva_roc.jpg
+
    图 96：模型对比报告 - ROC
 
-.. image:: ../images/cmp_eva_ks.jpg
-   :align: center
+.. figure:: ../images/cmp_eva_ks.jpg
+
    图 97：模型对比报告 - K-S
 
 
@@ -975,18 +975,18 @@
 
 1、首先加载数据源，选择三方数据
  
-.. image:: ../images/cmp_mh_reader.png
-   :align: center
+.. figure:: ../images/cmp_mh_reader.png
+
    图 98：多host场景数据源加载
 
 2、执行数据求交
  
-.. image:: ../images/cmp_mh_intersect.png
-   :align: center
+.. figure:: ../images/cmp_mh_intersect.png
+
    图 99：多host场景求交
 
 3、执行逻辑回归组件，查看报告
 
-.. image:: ../images/cmp_ml_lr.png
-   :align: center
+.. figure:: ../images/cmp_ml_lr.png
+
    图 100：多host场景逻辑回归组件运行
