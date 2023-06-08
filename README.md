@@ -13,10 +13,9 @@ SeceumFL是一个基于Web的联邦学习全生命周期的管理平台，在[FA
 
 ## 快速开始
 
-- [SeceumFL使用指南](https://seceumfl.readthedocs.io/zh/latest/)
+- [SeceumFL快速入门](https://seceumfl.readthedocs.io/zh/latest/)
 - [SeceumFL用户使用手册](https://seceumfl.readthedocs.io/zh/latest/main.html)
 - [SeceumFL操作演示](...)
-
 
 
 ## 许可证
