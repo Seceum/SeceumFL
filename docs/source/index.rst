@@ -39,7 +39,7 @@
 部署安装_
 ^^^^^^^^^^^^^
 
-.. _部署安装: https://github.com/Seceum/SeceumFL/blob/main/deployment_CN.md
+.. _部署安装: https://github.com/Seceum/SeceumFL/blob/main/INSTALLATION_CN.md
 
 --------------
 
