@@ -45,7 +45,6 @@ html_sidebars = {
         "sidebar/scroll-start.html",
         "sidebar/brand.html",
         "sidebar/navigation.html",
-        "sidebar/variant-selector.html",
         "sidebar/scroll-end.html",
     ]
 }
