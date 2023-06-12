@@ -1,4 +1,4 @@
-import os, json, sys, re, yaml
+import os, json, sys, re, yaml, copy
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -14,6 +14,15 @@ if __name__ == "__main__":
 
     MY_IP = obj["route_table"][pid]["default"][0]["ip"]
     print(f"[INFO] My IP: {MY_IP}")
+
+    print("[INFO]Init fate-serving/conf/route_table")
+    rt = copy.deepcopy(obj)
+    for p in rt["route_table"]:
+        if "serving" not in rt["route_table"][p]:
+            rt["route_table"][p]["serving"] = copy.deepcopy(rt["route_table"][p]["default"])
+            rt["route_table"][p]["serving"][0]["port"] = 8059
+    json.dump(rt, open("fate-serving/fate-serving-proxy/conf/route_table.json", "w+"), indent=4)
+    print("[DONE]")
 
     print("[INFO]Init conf/service_conf.yaml")
     with open(pwd + "conf/service_conf.yaml", "r") as f:
