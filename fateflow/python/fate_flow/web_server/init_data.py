@@ -14,7 +14,7 @@ from fate_flow.web_server.db.ras_manage import RsaKeyManager
 from fate_flow.web_server.db_service.algorithm_service import AlgorithmInfoService
 from fate_flow.web_server.db_service.auth_service import UserService, PermissionService, GroupService
 from fate_flow.web_server.db_service.event_service import EventService
-from fate_flow.web_server.fl_config import eggroll_route_table_path
+from fate_flow.web_server.fl_config import eggroll_route_table_path, PARTY_ID
 from fate_flow.web_server.utils.common_util import datetime_format
 
 
@@ -82,7 +82,7 @@ def init_node_info():
         # 存在则更新
         for party_id, item in config["route_table"].items():
             predict_party_ip = item["default"][0]["ip"]
-            if party_id == "default" or predict_party_ip == "rollsite":
+            if party_id == "default" or party_id == PARTY_ID:
                 continue
             predict_port = item["default"][0]["port"]
             party_name = item["default"][0].get("name", party_id)

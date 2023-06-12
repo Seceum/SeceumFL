@@ -13,7 +13,6 @@ from fate_flow.web_server.fl_config import config, PARTY_ID
 from fate_flow.web_server.utils.common_util import datetime_format
 from fate_flow.web_server.utils.enums import StatusEnum, PartyPingStatusEnum, UserAuthEnum, NodeStatusEnum, \
     SampleStatusEnum, SiteKeyName, OwnerEnum
-from fate_flow.web_server.utils.node_util import delete_rollsite_node, add_rollsite_node
 from fate_flow.web_server.utils.socket_util import ping_status
 from fate_flow.web_server.utils.reponse_util import get_json_result, validate_permission_code
 
@@ -30,9 +29,10 @@ def ping_node():
         train_port = request_data["train_port"]
         predict_party_ip = request_data["predict_party_ip"]
         predict_port = request_data["predict_port"]
-        train_flag = ping_status(train_party_ip, train_port)
+        # train_flag = ping_status(train_party_ip, train_port)
         predict_flag = ping_status(predict_party_ip, predict_port)
-        if train_flag and predict_flag:
+        # if train_flag and predict_flag:
+        if predict_flag:
             msg = "success"
             data = True
         else:
@@ -108,9 +108,9 @@ def edit_node(party_id):
     host_eggroll_port = request_data["predict_port"]
     guest_eggroll_ip = request_data["train_party_ip"]
     guest_eggroll_port = request_data["train_port"]
-    guest_eggroll_flag = ping_status(guest_eggroll_ip, guest_eggroll_port)
+    # guest_eggroll_flag = ping_status(guest_eggroll_ip, guest_eggroll_port)
     host_eggroll_flag = ping_status(host_eggroll_ip, host_eggroll_port)
-    if guest_eggroll_flag and host_eggroll_flag:
+    if host_eggroll_flag:
         request_data["ping_status"] = PartyPingStatusEnum.CONNECT.value
     else:
         return get_json_result(data=False, retmsg='网络不通', retcode=100)
@@ -143,7 +143,7 @@ def edit_node(party_id):
 
 @manager.route("/add", methods=['POST'])
 @login_required
-@validate_request("id", "party_name", "public_key", "train_party_ip", "train_port", "predict_party_ip", "predict_port")
+@validate_request("id", "party_name", "train_party_ip", "train_port", "predict_party_ip", "predict_port")
 @validate_permission_code(UserAuthEnum.SYSTEM.value, UserAuthEnum.SYSTEM_USER_NODE.value,
                           UserAuthEnum.SYSTEM_USER_NODE_CREATE.value)
 def add_node():
@@ -164,9 +164,10 @@ def add_node():
     guest_eggroll_port = request_data["train_port"]
     host_eggroll_ip = request_data["predict_party_ip"]
     host_eggroll_port = request_data["predict_port"]
-    guest_eggroll_flag = ping_status(guest_eggroll_ip, guest_eggroll_port)
+    # guest_eggroll_flag = ping_status(guest_eggroll_ip, guest_eggroll_port)
     host_eggroll_flag = ping_status(host_eggroll_ip, host_eggroll_port)
-    if guest_eggroll_flag and host_eggroll_flag:
+    # if guest_eggroll_flag and host_eggroll_flag:
+    if host_eggroll_flag:
         request_data["ping_status"] = PartyPingStatusEnum.CONNECT.value
     else:
         return get_json_result(data=False, retmsg='网络不通', retcode=100)

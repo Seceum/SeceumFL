@@ -78,7 +78,8 @@ def get_json_result(retcode=RetCode.SUCCESS, retmsg='success', data=None, job_id
     import re
     result_dict = {
         "retcode": retcode,
-        "retmsg": re.sub(r"fate", "seceum", retmsg, flags=re.IGNORECASE),
+        "retmsg":retmsg,
+        # "retmsg": re.sub(r"fate", "seceum", retmsg, flags=re.IGNORECASE),
         "data": data,
         "jobId": job_id,
         "meta": meta,
