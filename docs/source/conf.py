@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'SeceumFL'
-copyright = '2023, seceum'
-author = 'seceum'
+copyright = '2023, Seceum Tech'
+author = 'Seceum'
 release = '3.2'
 
 # -- General configuration ---------------------------------------------------
@@ -45,7 +45,6 @@ html_sidebars = {
         "sidebar/scroll-start.html",
         "sidebar/brand.html",
         "sidebar/navigation.html",
-        "sidebar/variant-selector.html",
         "sidebar/scroll-end.html",
     ]
 }
