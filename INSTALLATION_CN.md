@@ -346,3 +346,21 @@ toy test job 202306050945229905440 is success
 
 ### 5.4  Serving服务状态
 使用浏览器打开**http://MY_IP:8350/**, 登录名和密码都是**admin**。如能成功登录则表示通过测试。
+
+## 6.    其它
+对于数据源，系统可以支持接入hive，hbase，hdfs，oracal。此时需要进入容器安装以下依赖：
+
+```shell
+docker exec -it fate_flow_server /bin/bash
+cd /data/projects/;
+curl https://archive.apache.org/dist/hadoop/common/hadoop-3.2.1/hadoop-3.2.1.tar.gz
+tar -xf ./hadoop-3.2.1.tar.gz;
+rm -fr hadoop-3.2.1.tar.gz;
+
+yum install unzip
+curl https://download.oracle.com/otn_software/linux/instantclient/213000/instantclient-basiclite-linux-21.3.0.0.0.zip
+unzip instantclient-basiclite-linux-21.3.0.0.0.zip
+mv instantclient-basiclite-linux-21.3.0.0.0 instantclient
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/data/projects/hadoop-3.2.1/lib/native:/data/projects/instantclient
+```
+
