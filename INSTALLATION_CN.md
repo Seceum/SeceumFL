@@ -348,7 +348,7 @@ toy test job 202306050945229905440 is success
 使用浏览器打开**http://MY_IP:8350/**, 登录名和密码都是**admin**。如能成功登录则表示通过测试。
 
 ## 6.    其它
-对于数据源，系统可以支持接入hive，hbase，hdfs，oracle。此时需要进入容器安装以下依赖：
+SeceumFL系统可以支持接入HIVE，HBase，HDFS，ORACLE，MySQL，PostgreSQL以及TXT和CSV文件格式的数据源，此时需要进入容器安装以下依赖：
 
 ```shell
 docker exec -it fate_flow_server /bin/bash
