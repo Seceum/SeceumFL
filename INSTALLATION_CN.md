@@ -1,11 +1,11 @@
-# 部署说明文档
+# SeceumFL v3.2 系统部署说明文档
 
-欢迎使用SeceumFL开源联邦学习系统产品！！    
-SeceumFL是[神谱科技](https://www.seceum.com/)在开源系统[FATE](https://github.com/FederatedAI)的基础上进行二次开发并做了优化后的联邦学习系统。    
+欢迎使用SeceumFL v3.2开源联邦学习系统！！    
+SeceumFL v3.2系统是[神谱科技](https://www.seceum.com/)在开源的联邦学习系统[FATE](https://github.com/FederatedAI) v1.10.0版本基础上进行二次开发并优化后的联邦学习系统。    
 其中包括子模块有：**FATE-Flow、FATE-Serving、FATE-Board、Eggroll**。    
 在开始阶段，我们建议用两台物理机以及Docker来部署**SeceumFL**。    
 
-SeceumFL会在每台机器上启动如下服务：
+SeceumFL v3.2会在每台机器上启动如下服务：
 
 ```shell
 docker ps
