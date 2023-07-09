@@ -16,7 +16,7 @@ SeceumFL是一个基于Web的联邦学习全生命周期的管理平台，在[FA
 
 - [SeceumFL快速入门](https://seceumfl.readthedocs.io/zh/latest/)
 - [SeceumFL用户使用手册](https://seceumfl.readthedocs.io/zh/latest/main.html)
-- [SeceumFL使用教程视频演示](https://www.bilibili.com/video/BV1xs4y167AL/?vd_source=5ea1aacf33f930d98222e0b2a9373c56)
+- [SeceumFL使用教程视频演示](https://mp.weixin.qq.com/s/evuR8bDq5dvWbczRHovjdg)
 
 ## 许可证
 
@@ -25,10 +25,13 @@ SeceumFL是一个基于Web的联邦学习全生命周期的管理平台，在[FA
 
 
 ## 联系我们
-E-mail: cs@seceum.com 
 
-微信公众号：SeceumMPC  
-官方微博：https://weibo.com/seceumfl 
-知乎： https://www.zhihu.com/org/shen-pu-ke-ji-seceum 
+- E-mail: cs@seceum.com 
 
-更多关于神谱科技公司的信息，请浏览[神谱科技官网](https://www.seceum.com/contact.html)
+- 微信公众号：SeceumMPC  
+
+- [神谱科技官方微博](https://weibo.com/seceumfl)
+
+- [神谱科技知乎](https://www.zhihu.com/org/shen-pu-ke-ji-seceum) 
+
+- 更多关于神谱科技公司的信息，请浏览[神谱科技官网](https://www.seceum.com/contact.html)
